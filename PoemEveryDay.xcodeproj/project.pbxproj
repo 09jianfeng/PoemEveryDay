@@ -18,6 +18,9 @@
 		2E4EFCCC1DE52B9B00D00AB8 /* PoemEveryDayTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E4EFCCB1DE52B9B00D00AB8 /* PoemEveryDayTests.m */; };
 		2E4EFCD71DE52B9B00D00AB8 /* PoemEveryDayUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E4EFCD61DE52B9B00D00AB8 /* PoemEveryDayUITests.m */; };
 		2E4EFCE91DE56C8600D00AB8 /* NSData+Base64AES128CBC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E4EFCE81DE56C8600D00AB8 /* NSData+Base64AES128CBC.m */; };
+		2E4EFCEC1DE595B500D00AB8 /* URLCreator.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E4EFCEB1DE595B500D00AB8 /* URLCreator.m */; };
+		2E4EFCEE1DE59DB100D00AB8 /* poem_start.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E4EFCED1DE59DB100D00AB8 /* poem_start.png */; };
+		2E4EFCF01DE59DFF00D00AB8 /* poem_default.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E4EFCEF1DE59DFF00D00AB8 /* poem_default.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +63,10 @@
 		2E4EFCD81DE52B9B00D00AB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2E4EFCE71DE56C8600D00AB8 /* NSData+Base64AES128CBC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64AES128CBC.h"; sourceTree = "<group>"; };
 		2E4EFCE81DE56C8600D00AB8 /* NSData+Base64AES128CBC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Base64AES128CBC.m"; sourceTree = "<group>"; };
+		2E4EFCEA1DE595B500D00AB8 /* URLCreator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URLCreator.h; sourceTree = "<group>"; };
+		2E4EFCEB1DE595B500D00AB8 /* URLCreator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URLCreator.m; sourceTree = "<group>"; };
+		2E4EFCED1DE59DB100D00AB8 /* poem_start.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = poem_start.png; path = resource/poem_start.png; sourceTree = "<group>"; };
+		2E4EFCEF1DE59DFF00D00AB8 /* poem_default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = poem_default.png; path = resource/poem_default.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +117,7 @@
 		2E4EFCAA1DE52B9A00D00AB8 /* PoemEveryDay */ = {
 			isa = PBXGroup;
 			children = (
+				2E4EFCF11DE59E3800D00AB8 /* resource */,
 				2E4EFCE61DE5399F00D00AB8 /* Models */,
 				2E4EFCE51DE5399200D00AB8 /* Views */,
 				2E4EFCE41DE5398100D00AB8 /* Controllers */,
@@ -175,8 +183,19 @@
 			children = (
 				2E4EFCE71DE56C8600D00AB8 /* NSData+Base64AES128CBC.h */,
 				2E4EFCE81DE56C8600D00AB8 /* NSData+Base64AES128CBC.m */,
+				2E4EFCEA1DE595B500D00AB8 /* URLCreator.h */,
+				2E4EFCEB1DE595B500D00AB8 /* URLCreator.m */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		2E4EFCF11DE59E3800D00AB8 /* resource */ = {
+			isa = PBXGroup;
+			children = (
+				2E4EFCEF1DE59DFF00D00AB8 /* poem_default.png */,
+				2E4EFCED1DE59DB100D00AB8 /* poem_start.png */,
+			);
+			name = resource;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -289,6 +308,8 @@
 				2E4EFCC11DE52B9A00D00AB8 /* LaunchScreen.storyboard in Resources */,
 				2E4EFCBE1DE52B9A00D00AB8 /* Assets.xcassets in Resources */,
 				2E4EFCBC1DE52B9A00D00AB8 /* Main.storyboard in Resources */,
+				2E4EFCF01DE59DFF00D00AB8 /* poem_default.png in Resources */,
+				2E4EFCEE1DE59DB100D00AB8 /* poem_start.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -315,6 +336,7 @@
 			files = (
 				2E4EFCE91DE56C8600D00AB8 /* NSData+Base64AES128CBC.m in Sources */,
 				2E4EFCB61DE52B9A00D00AB8 /* DataViewController.m in Sources */,
+				2E4EFCEC1DE595B500D00AB8 /* URLCreator.m in Sources */,
 				2E4EFCB01DE52B9A00D00AB8 /* AppDelegate.m in Sources */,
 				2E4EFCB91DE52B9A00D00AB8 /* ModelController.m in Sources */,
 				2E4EFCAD1DE52B9A00D00AB8 /* main.m in Sources */,

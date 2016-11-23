@@ -9,6 +9,7 @@
 #import "DataViewController.h"
 
 @interface DataViewController ()
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *imageViewHeigh;
 
 @end
 
@@ -28,7 +29,7 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    self.dataLabel.text = [self.dataObject description];
+//    self.dataLabel.text = [self.dataObject description];
 }
 
 
