@@ -20,6 +20,10 @@
     // Do any additional setup after loading the view, typically from a nib.
 }
 
+- (void)updateViewConstraints{
+    [super updateViewConstraints];
+    _imageViewHeigh.constant = CGRectGetWidth(self.view.frame) - 56;
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

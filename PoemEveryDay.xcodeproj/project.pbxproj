@@ -21,6 +21,7 @@
 		2E4EFCEC1DE595B500D00AB8 /* URLCreator.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E4EFCEB1DE595B500D00AB8 /* URLCreator.m */; };
 		2E4EFCEE1DE59DB100D00AB8 /* poem_start.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E4EFCED1DE59DB100D00AB8 /* poem_start.png */; };
 		2E4EFCF01DE59DFF00D00AB8 /* poem_default.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E4EFCEF1DE59DFF00D00AB8 /* poem_default.png */; };
+		2E4EFCF71DE6831800D00AB8 /* PoemDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E4EFCF61DE6831800D00AB8 /* PoemDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,8 @@
 		2E4EFCEB1DE595B500D00AB8 /* URLCreator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URLCreator.m; sourceTree = "<group>"; };
 		2E4EFCED1DE59DB100D00AB8 /* poem_start.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = poem_start.png; path = resource/poem_start.png; sourceTree = "<group>"; };
 		2E4EFCEF1DE59DFF00D00AB8 /* poem_default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = poem_default.png; path = resource/poem_default.png; sourceTree = "<group>"; };
+		2E4EFCF51DE6831800D00AB8 /* PoemDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PoemDetailViewController.h; sourceTree = "<group>"; };
+		2E4EFCF61DE6831800D00AB8 /* PoemDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PoemDetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +170,8 @@
 				2E4EFCB51DE52B9A00D00AB8 /* DataViewController.m */,
 				2E4EFCB71DE52B9A00D00AB8 /* ModelController.h */,
 				2E4EFCB81DE52B9A00D00AB8 /* ModelController.m */,
+				2E4EFCF51DE6831800D00AB8 /* PoemDetailViewController.h */,
+				2E4EFCF61DE6831800D00AB8 /* PoemDetailViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -334,6 +339,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E4EFCF71DE6831800D00AB8 /* PoemDetailViewController.m in Sources */,
 				2E4EFCE91DE56C8600D00AB8 /* NSData+Base64AES128CBC.m in Sources */,
 				2E4EFCB61DE52B9A00D00AB8 /* DataViewController.m in Sources */,
 				2E4EFCEC1DE595B500D00AB8 /* URLCreator.m in Sources */,
