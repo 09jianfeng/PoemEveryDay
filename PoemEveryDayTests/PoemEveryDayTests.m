@@ -69,7 +69,7 @@
 
 - (void)testPoemListRequest{
     NOTIFYINIT;
-    [WebRequest requestCoverListData:^(NSDictionary *jsonDic) {
+    [WebRequest requestCoverListData:1 pageNum:10 compeletionBlock:^(NSDictionary *jsonDic) {
         NSLog(@"%@",jsonDic);
         XCTAssertNotNil(jsonDic,@"coverList is nil");
         NOTIFY

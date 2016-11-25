@@ -10,7 +10,7 @@
 
 @interface WebRequest : NSObject
 
-+ (void)requestCoverListData:(void(^)(NSDictionary *jsonDic))compeletionBlock;
++ (void)requestCoverListData:(NSInteger)page pageNum:(NSInteger)pageNum compeletionBlock:(void(^)(NSDictionary *jsonDic))compeletionBlock;
 
 + (void)requestPoemDetailWithID:(NSInteger)programID compeletionBlock:(void(^)(NSDictionary *jsonDic))compeletionBlock;
 

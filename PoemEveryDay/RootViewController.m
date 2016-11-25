@@ -9,9 +9,9 @@
 #import "RootViewController.h"
 #import "ModelController.h"
 #import "DataViewController.h"
+#import "RootViewControllerVM.h"
 
 @interface RootViewController ()
-
 @property (readonly, strong, nonatomic) ModelController *modelController;
 @end
 
@@ -44,6 +44,8 @@
     pageViewRect = CGRectInset(pageViewRect, 40.0, 40.0);
 
     [self.pageViewController didMoveToParentViewController:self];
+    
+    
 }
 
 

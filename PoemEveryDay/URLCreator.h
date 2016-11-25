@@ -10,7 +10,7 @@
 
 @interface URLCreator : NSObject
 
-+ (NSString *)poemListURLString;
++ (NSString *)poemListURLString:(NSInteger)page count:(NSInteger)count;
 
 + (NSString *)poemDetailURLString:(NSInteger)programID;
 

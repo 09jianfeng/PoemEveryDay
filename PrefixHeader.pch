@@ -18,3 +18,4 @@
 #endif /* PrefixHeader_pch */
 
 static const DDLogLevel ddLogLevel = DDLogLevelDebug;
+#import "Macro.h"

@@ -11,9 +11,9 @@
 
 @implementation URLCreator
 
-+ (NSString *)poemListURLString{
++ (NSString *)poemListURLString:(NSInteger)page count:(NSInteger)count{
     NSString *getCoverList = @"http://api.thepoemforyou.com/cover/getCoverList?p=";
-    NSString *sourceString = [NSString stringWithFormat:@"pageNo=%d&pageSize=%d",1,10];
+    NSString *sourceString = [NSString stringWithFormat:@"pageNo=%td&pageSize=%td",page,count];
     NSData *sourceData = [sourceString dataUsingEncoding:NSUTF8StringEncoding];
     NSData *encryptData = [sourceData AES128EncryptWithKey:@""];
     NSString *finalString = [encryptData base64EncodedString];

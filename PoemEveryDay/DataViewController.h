@@ -12,6 +12,7 @@
 
 @property (strong, nonatomic) IBOutlet UILabel *dataLabel;
 @property (strong, nonatomic) id dataObject;
+@property (assign, nonatomic) NSInteger controllerIndex;
 
 @end
 

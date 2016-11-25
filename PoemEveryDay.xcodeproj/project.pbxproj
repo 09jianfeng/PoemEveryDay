@@ -24,6 +24,10 @@
 		2E4EFCF01DE59DFF00D00AB8 /* poem_default.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E4EFCEF1DE59DFF00D00AB8 /* poem_default.png */; };
 		2E4EFCF71DE6831800D00AB8 /* PoemDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E4EFCF61DE6831800D00AB8 /* PoemDetailViewController.m */; };
 		2EB5022C1DE6BF5F00A5FB13 /* WebRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EB5022B1DE6BF5F00A5FB13 /* WebRequest.m */; };
+		2EB502321DE7E50D00A5FB13 /* DataViewControllerVM.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EB502311DE7E50D00A5FB13 /* DataViewControllerVM.m */; };
+		2EB502371DE8195900A5FB13 /* RootViewControllerVM.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EB502361DE8195900A5FB13 /* RootViewControllerVM.m */; };
+		2EB502401DE81C9C00A5FB13 /* CoverListDataStruc.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EB5023F1DE81C9C00A5FB13 /* CoverListDataStruc.m */; };
+		2EB502481DE83E2100A5FB13 /* PoemDetailViewControllerVM.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EB502471DE83E2100A5FB13 /* PoemDetailViewControllerVM.m */; };
 		EA25903303BAD8FBA33497A0 /* Pods_PoemEveryDayTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AD8E4660C5D3E0BB9220B6A /* Pods_PoemEveryDayTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -77,6 +81,15 @@
 		2EB5022A1DE6BF5F00A5FB13 /* WebRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebRequest.h; sourceTree = "<group>"; };
 		2EB5022B1DE6BF5F00A5FB13 /* WebRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebRequest.m; sourceTree = "<group>"; };
 		2EB5022E1DE7D1F800A5FB13 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = SOURCE_ROOT; };
+		2EB502301DE7E50D00A5FB13 /* DataViewControllerVM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataViewControllerVM.h; sourceTree = "<group>"; };
+		2EB502311DE7E50D00A5FB13 /* DataViewControllerVM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataViewControllerVM.m; sourceTree = "<group>"; };
+		2EB502351DE8195900A5FB13 /* RootViewControllerVM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewControllerVM.h; sourceTree = "<group>"; };
+		2EB502361DE8195900A5FB13 /* RootViewControllerVM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewControllerVM.m; sourceTree = "<group>"; };
+		2EB502391DE81A6200A5FB13 /* Macro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Macro.h; sourceTree = "<group>"; };
+		2EB5023E1DE81C9C00A5FB13 /* CoverListDataStruc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoverListDataStruc.h; sourceTree = "<group>"; };
+		2EB5023F1DE81C9C00A5FB13 /* CoverListDataStruc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoverListDataStruc.m; sourceTree = "<group>"; };
+		2EB502461DE83E2100A5FB13 /* PoemDetailViewControllerVM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PoemDetailViewControllerVM.h; sourceTree = "<group>"; };
+		2EB502471DE83E2100A5FB13 /* PoemDetailViewControllerVM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PoemDetailViewControllerVM.m; sourceTree = "<group>"; };
 		5FF43C879AD37AA951701666 /* Pods-PoemEveryDay.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoemEveryDay.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PoemEveryDay/Pods-PoemEveryDay.debug.xcconfig"; sourceTree = "<group>"; };
 		811033340870AEED899BFE32 /* Pods-PoemEveryDay.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoemEveryDay.release.xcconfig"; path = "Pods/Target Support Files/Pods-PoemEveryDay/Pods-PoemEveryDay.release.xcconfig"; sourceTree = "<group>"; };
 		8AD8E4660C5D3E0BB9220B6A /* Pods_PoemEveryDayTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PoemEveryDayTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -137,9 +150,11 @@
 			isa = PBXGroup;
 			children = (
 				2E4EFCF11DE59E3800D00AB8 /* resource */,
+				2EB502341DE7EC2600A5FB13 /* Vendor */,
+				2EB502381DE81A4500A5FB13 /* Util */,
 				2E4EFCE61DE5399F00D00AB8 /* Models */,
+				2EB5022F1DE7E4DD00A5FB13 /* ViewModel */,
 				2E4EFCE51DE5399200D00AB8 /* Views */,
-				2E4EFCE41DE5398100D00AB8 /* Controllers */,
 				2E4EFCAE1DE52B9A00D00AB8 /* AppDelegate.h */,
 				2E4EFCAF1DE52B9A00D00AB8 /* AppDelegate.m */,
 				2E4EFCBA1DE52B9A00D00AB8 /* Main.storyboard */,
@@ -196,6 +211,7 @@
 		2E4EFCE51DE5399200D00AB8 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				2E4EFCE41DE5398100D00AB8 /* Controllers */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -203,12 +219,9 @@
 		2E4EFCE61DE5399F00D00AB8 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				2EB5023A1DE81C3200A5FB13 /* NetWork */,
 				2E4EFCE71DE56C8600D00AB8 /* NSData+Base64AES128CBC.h */,
 				2E4EFCE81DE56C8600D00AB8 /* NSData+Base64AES128CBC.m */,
-				2E4EFCEA1DE595B500D00AB8 /* URLCreator.h */,
-				2E4EFCEB1DE595B500D00AB8 /* URLCreator.m */,
-				2EB5022A1DE6BF5F00A5FB13 /* WebRequest.h */,
-				2EB5022B1DE6BF5F00A5FB13 /* WebRequest.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -220,6 +233,47 @@
 				2E4EFCED1DE59DB100D00AB8 /* poem_start.png */,
 			);
 			name = resource;
+			sourceTree = "<group>";
+		};
+		2EB5022F1DE7E4DD00A5FB13 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				2EB502301DE7E50D00A5FB13 /* DataViewControllerVM.h */,
+				2EB502311DE7E50D00A5FB13 /* DataViewControllerVM.m */,
+				2EB502351DE8195900A5FB13 /* RootViewControllerVM.h */,
+				2EB502361DE8195900A5FB13 /* RootViewControllerVM.m */,
+				2EB502461DE83E2100A5FB13 /* PoemDetailViewControllerVM.h */,
+				2EB502471DE83E2100A5FB13 /* PoemDetailViewControllerVM.m */,
+			);
+			name = ViewModel;
+			sourceTree = "<group>";
+		};
+		2EB502341DE7EC2600A5FB13 /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Vendor;
+			sourceTree = "<group>";
+		};
+		2EB502381DE81A4500A5FB13 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				2EB502391DE81A6200A5FB13 /* Macro.h */,
+			);
+			name = Util;
+			sourceTree = "<group>";
+		};
+		2EB5023A1DE81C3200A5FB13 /* NetWork */ = {
+			isa = PBXGroup;
+			children = (
+				2E4EFCEA1DE595B500D00AB8 /* URLCreator.h */,
+				2E4EFCEB1DE595B500D00AB8 /* URLCreator.m */,
+				2EB5022A1DE6BF5F00A5FB13 /* WebRequest.h */,
+				2EB5022B1DE6BF5F00A5FB13 /* WebRequest.m */,
+				2EB5023E1DE81C9C00A5FB13 /* CoverListDataStruc.h */,
+				2EB5023F1DE81C9C00A5FB13 /* CoverListDataStruc.m */,
+			);
+			name = NetWork;
 			sourceTree = "<group>";
 		};
 		3E1CE4DD10C8B8ECE2E2D840 /* Pods */ = {
@@ -479,12 +533,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				2E4EFCF71DE6831800D00AB8 /* PoemDetailViewController.m in Sources */,
+				2EB502321DE7E50D00A5FB13 /* DataViewControllerVM.m in Sources */,
 				2E4EFCE91DE56C8600D00AB8 /* NSData+Base64AES128CBC.m in Sources */,
 				2E4EFCB61DE52B9A00D00AB8 /* DataViewController.m in Sources */,
+				2EB502481DE83E2100A5FB13 /* PoemDetailViewControllerVM.m in Sources */,
+				2EB502371DE8195900A5FB13 /* RootViewControllerVM.m in Sources */,
 				2E4EFCEC1DE595B500D00AB8 /* URLCreator.m in Sources */,
 				2E4EFCB01DE52B9A00D00AB8 /* AppDelegate.m in Sources */,
 				2EB5022C1DE6BF5F00A5FB13 /* WebRequest.m in Sources */,
 				2E4EFCB91DE52B9A00D00AB8 /* ModelController.m in Sources */,
+				2EB502401DE81C9C00A5FB13 /* CoverListDataStruc.m in Sources */,
 				2E4EFCAD1DE52B9A00D00AB8 /* main.m in Sources */,
 				2E4EFCB31DE52B9A00D00AB8 /* RootViewController.m in Sources */,
 			);
@@ -635,7 +693,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5FF43C879AD37AA951701666 /* Pods-PoemEveryDay.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = RUDNP34A78;
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
@@ -655,7 +713,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 811033340870AEED899BFE32 /* Pods-PoemEveryDay.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = RUDNP34A78;
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
