@@ -8,6 +8,14 @@
 
 #import <XCTest/XCTest.h>
 #import "NSData+Base64AES128CBC.h"
+#import "WebRequest.h"
+
+#ifndef Header_h
+#define Header_h
+#define NOTIFYINIT XCTestExpectation *wait = [self expectationWithDescription:@""];
+#define WAITWITHTIME(x) [self waitForExpectationsWithTimeout:x handler:^(NSError * _Nullable error) {NSLog(@"%s end",__FUNCTION__);}];
+#define NOTIFY [wait fulfill];
+#endif /* Header_h */
 
 @interface PoemEveryDayTests : XCTestCase
 
@@ -57,6 +65,26 @@
                                                                                                        kCFStringEncodingUTF8 );
     NSString *url = [NSString stringWithFormat:@"%@%@",searchFindByID,escapedUrlString];
     NSLog(@"final url = %@",url);
+}
+
+- (void)testPoemListRequest{
+    NOTIFYINIT;
+    [WebRequest requestCoverListData:^(NSDictionary *jsonDic) {
+        NSLog(@"%@",jsonDic);
+        XCTAssertNotNil(jsonDic,@"coverList is nil");
+        NOTIFY
+    }];
+    WAITWITHTIME(10);
+}
+
+- (void)testPoemDetailRequest{
+    NOTIFYINIT;
+    [WebRequest requestPoemDetailWithID:1233 compeletionBlock:^(NSDictionary *jsonDic) {
+        NSLog(@"%@",jsonDic);
+        XCTAssertNotNil(jsonDic,@"PoemDetail is nil");
+        NOTIFY
+    }];
+    WAITWITHTIME(10);
 }
 
 - (void)testPerformanceExample {

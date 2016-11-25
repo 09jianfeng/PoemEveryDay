@@ -24,12 +24,13 @@
                                                                                                        (CFStringRef)@"!*'();:@&=+$,/?%#[]",
                                                                                                        kCFStringEncodingUTF8 );
     NSString *url = [NSString stringWithFormat:@"%@%@",getCoverList,escapedUrlString];
+    NSLog(@"coverList %@",url);
     return url;
 }
 
-+ (NSString *)poemDetailURLString{
++ (NSString *)poemDetailURLString:(NSInteger)programID{
     NSString *searchFindByID = @"http://api.thepoemforyou.com/search/searchFindById?p=";
-    NSString *sourceString = [NSString stringWithFormat:@"id=%d",1240];
+    NSString *sourceString = [NSString stringWithFormat:@"id=%td",programID];
     NSData *sourceData = [sourceString dataUsingEncoding:NSUTF8StringEncoding];
     NSData *encryptData = [sourceData AES128EncryptWithKey:@""];
     NSString *finalString = [encryptData base64EncodedString];
@@ -40,6 +41,7 @@
                                                                                                        (CFStringRef)@"!*'();:@&=+$,/?%#[]",
                                                                                                        kCFStringEncodingUTF8 );
     NSString *url = [NSString stringWithFormat:@"%@%@",searchFindByID,escapedUrlString];
+    NSLog(@"detailURL %@",url);
     return url;
 }
 

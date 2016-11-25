@@ -12,6 +12,6 @@
 
 + (NSString *)poemListURLString;
 
-+ (NSString *)poemDetailURLString;
++ (NSString *)poemDetailURLString:(NSInteger)programID;
 
 @end

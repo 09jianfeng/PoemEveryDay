@@ -1,0 +1,20 @@
+//
+//  PrefixHeader.pch
+//  PoemEveryDay
+//
+//  Created by 陈建峰 on 16/11/25.
+//  Copyright © 2016年 陈建峰. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#import "CocoaLumberjack.h"
+#define LOG_LEVEL_DEF  ddLogLevel
+
+#endif /* PrefixHeader_pch */
+
+static const DDLogLevel ddLogLevel = DDLogLevelDebug;

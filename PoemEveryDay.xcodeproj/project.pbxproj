@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0014A543CEA23FD9CB20B7D0 /* Pods_PoemEveryDay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCB22FA93BB1F4363314247F /* Pods_PoemEveryDay.framework */; };
 		2E4EFCAD1DE52B9A00D00AB8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E4EFCAC1DE52B9A00D00AB8 /* main.m */; };
 		2E4EFCB01DE52B9A00D00AB8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E4EFCAF1DE52B9A00D00AB8 /* AppDelegate.m */; };
 		2E4EFCB31DE52B9A00D00AB8 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E4EFCB21DE52B9A00D00AB8 /* RootViewController.m */; };
@@ -22,6 +23,8 @@
 		2E4EFCEE1DE59DB100D00AB8 /* poem_start.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E4EFCED1DE59DB100D00AB8 /* poem_start.png */; };
 		2E4EFCF01DE59DFF00D00AB8 /* poem_default.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E4EFCEF1DE59DFF00D00AB8 /* poem_default.png */; };
 		2E4EFCF71DE6831800D00AB8 /* PoemDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E4EFCF61DE6831800D00AB8 /* PoemDetailViewController.m */; };
+		2EB5022C1DE6BF5F00A5FB13 /* WebRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EB5022B1DE6BF5F00A5FB13 /* WebRequest.m */; };
+		EA25903303BAD8FBA33497A0 /* Pods_PoemEveryDayTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AD8E4660C5D3E0BB9220B6A /* Pods_PoemEveryDayTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +45,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		138DD00B450ADCAEE6CBC156 /* Pods-PoemEveryDayTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoemEveryDayTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PoemEveryDayTests/Pods-PoemEveryDayTests.release.xcconfig"; sourceTree = "<group>"; };
 		2E4EFCA81DE52B9A00D00AB8 /* PoemEveryDay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PoemEveryDay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E4EFCAC1DE52B9A00D00AB8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2E4EFCAE1DE52B9A00D00AB8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -70,6 +74,14 @@
 		2E4EFCEF1DE59DFF00D00AB8 /* poem_default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = poem_default.png; path = resource/poem_default.png; sourceTree = "<group>"; };
 		2E4EFCF51DE6831800D00AB8 /* PoemDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PoemDetailViewController.h; sourceTree = "<group>"; };
 		2E4EFCF61DE6831800D00AB8 /* PoemDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PoemDetailViewController.m; sourceTree = "<group>"; };
+		2EB5022A1DE6BF5F00A5FB13 /* WebRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebRequest.h; sourceTree = "<group>"; };
+		2EB5022B1DE6BF5F00A5FB13 /* WebRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebRequest.m; sourceTree = "<group>"; };
+		2EB5022E1DE7D1F800A5FB13 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = SOURCE_ROOT; };
+		5FF43C879AD37AA951701666 /* Pods-PoemEveryDay.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoemEveryDay.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PoemEveryDay/Pods-PoemEveryDay.debug.xcconfig"; sourceTree = "<group>"; };
+		811033340870AEED899BFE32 /* Pods-PoemEveryDay.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoemEveryDay.release.xcconfig"; path = "Pods/Target Support Files/Pods-PoemEveryDay/Pods-PoemEveryDay.release.xcconfig"; sourceTree = "<group>"; };
+		8AD8E4660C5D3E0BB9220B6A /* Pods_PoemEveryDayTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PoemEveryDayTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A266D4C9BA1EF42A7DA56FBF /* Pods-PoemEveryDayTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoemEveryDayTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PoemEveryDayTests/Pods-PoemEveryDayTests.debug.xcconfig"; sourceTree = "<group>"; };
+		BCB22FA93BB1F4363314247F /* Pods_PoemEveryDay.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PoemEveryDay.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +89,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0014A543CEA23FD9CB20B7D0 /* Pods_PoemEveryDay.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,6 +97,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA25903303BAD8FBA33497A0 /* Pods_PoemEveryDayTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,6 +118,8 @@
 				2E4EFCCA1DE52B9B00D00AB8 /* PoemEveryDayTests */,
 				2E4EFCD51DE52B9B00D00AB8 /* PoemEveryDayUITests */,
 				2E4EFCA91DE52B9A00D00AB8 /* Products */,
+				3E1CE4DD10C8B8ECE2E2D840 /* Pods */,
+				87732102938175BDD2013965 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -138,6 +154,7 @@
 		2E4EFCAB1DE52B9A00D00AB8 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				2EB5022E1DE7D1F800A5FB13 /* PrefixHeader.pch */,
 				2E4EFCAC1DE52B9A00D00AB8 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -190,6 +207,8 @@
 				2E4EFCE81DE56C8600D00AB8 /* NSData+Base64AES128CBC.m */,
 				2E4EFCEA1DE595B500D00AB8 /* URLCreator.h */,
 				2E4EFCEB1DE595B500D00AB8 /* URLCreator.m */,
+				2EB5022A1DE6BF5F00A5FB13 /* WebRequest.h */,
+				2EB5022B1DE6BF5F00A5FB13 /* WebRequest.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -203,6 +222,26 @@
 			name = resource;
 			sourceTree = "<group>";
 		};
+		3E1CE4DD10C8B8ECE2E2D840 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5FF43C879AD37AA951701666 /* Pods-PoemEveryDay.debug.xcconfig */,
+				811033340870AEED899BFE32 /* Pods-PoemEveryDay.release.xcconfig */,
+				A266D4C9BA1EF42A7DA56FBF /* Pods-PoemEveryDayTests.debug.xcconfig */,
+				138DD00B450ADCAEE6CBC156 /* Pods-PoemEveryDayTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		87732102938175BDD2013965 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BCB22FA93BB1F4363314247F /* Pods_PoemEveryDay.framework */,
+				8AD8E4660C5D3E0BB9220B6A /* Pods_PoemEveryDayTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -210,9 +249,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2E4EFCDB1DE52B9B00D00AB8 /* Build configuration list for PBXNativeTarget "PoemEveryDay" */;
 			buildPhases = (
+				09CA6A1EF870D3405EEEF111 /* [CP] Check Pods Manifest.lock */,
 				2E4EFCA41DE52B9A00D00AB8 /* Sources */,
 				2E4EFCA51DE52B9A00D00AB8 /* Frameworks */,
 				2E4EFCA61DE52B9A00D00AB8 /* Resources */,
+				6CB08DCDB3EB8C1249777147 /* [CP] Embed Pods Frameworks */,
+				E20318B1D5D753FB33611E88 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -227,9 +269,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2E4EFCDE1DE52B9B00D00AB8 /* Build configuration list for PBXNativeTarget "PoemEveryDayTests" */;
 			buildPhases = (
+				D80D146E817CDAA26A95EB7D /* [CP] Check Pods Manifest.lock */,
 				2E4EFCC31DE52B9B00D00AB8 /* Sources */,
 				2E4EFCC41DE52B9B00D00AB8 /* Frameworks */,
 				2E4EFCC51DE52B9B00D00AB8 /* Resources */,
+				2CAB6966C22FAAC43E09B134 /* [CP] Embed Pods Frameworks */,
+				B829E284AEA959596C3B0F5B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -271,6 +316,7 @@
 					2E4EFCA71DE52B9A00D00AB8 = {
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = RUDNP34A78;
+						LastSwiftMigration = 0810;
 						ProvisioningStyle = Automatic;
 					};
 					2E4EFCC61DE52B9B00D00AB8 = {
@@ -334,6 +380,99 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		09CA6A1EF870D3405EEEF111 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		2CAB6966C22FAAC43E09B134 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PoemEveryDayTests/Pods-PoemEveryDayTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6CB08DCDB3EB8C1249777147 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PoemEveryDay/Pods-PoemEveryDay-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B829E284AEA959596C3B0F5B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PoemEveryDayTests/Pods-PoemEveryDayTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D80D146E817CDAA26A95EB7D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E20318B1D5D753FB33611E88 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PoemEveryDay/Pods-PoemEveryDay-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		2E4EFCA41DE52B9A00D00AB8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -344,6 +483,7 @@
 				2E4EFCB61DE52B9A00D00AB8 /* DataViewController.m in Sources */,
 				2E4EFCEC1DE595B500D00AB8 /* URLCreator.m in Sources */,
 				2E4EFCB01DE52B9A00D00AB8 /* AppDelegate.m in Sources */,
+				2EB5022C1DE6BF5F00A5FB13 /* WebRequest.m in Sources */,
 				2E4EFCB91DE52B9A00D00AB8 /* ModelController.m in Sources */,
 				2E4EFCAD1DE52B9A00D00AB8 /* main.m in Sources */,
 				2E4EFCB31DE52B9A00D00AB8 /* RootViewController.m in Sources */,
@@ -441,7 +581,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -483,7 +623,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -493,30 +633,47 @@
 		};
 		2E4EFCDC1DE52B9B00D00AB8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5FF43C879AD37AA951701666 /* Pods-PoemEveryDay.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = RUDNP34A78;
+				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = PrefixHeader.pch;
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/Pods/";
 				INFOPLIST_FILE = PoemEveryDay/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = feng.PoemEveryDay;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		2E4EFCDD1DE52B9B00D00AB8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 811033340870AEED899BFE32 /* Pods-PoemEveryDay.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = RUDNP34A78;
+				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = PrefixHeader.pch;
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/Pods/";
 				INFOPLIST_FILE = PoemEveryDay/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = feng.PoemEveryDay;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
 		2E4EFCDF1DE52B9B00D00AB8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A266D4C9BA1EF42A7DA56FBF /* Pods-PoemEveryDayTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = PoemEveryDayTests/Info.plist;
@@ -529,6 +686,7 @@
 		};
 		2E4EFCE01DE52B9B00D00AB8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 138DD00B450ADCAEE6CBC156 /* Pods-PoemEveryDayTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = PoemEveryDayTests/Info.plist;

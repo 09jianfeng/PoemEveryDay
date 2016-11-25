@@ -7,6 +7,9 @@
 //
 
 #import "DataViewController.h"
+#import "MBProgressHUD.h"
+#import "WebRequest.h"
+#import "CocoaLumberjack.h"
 
 @interface DataViewController ()
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *imageViewHeigh;
@@ -18,6 +21,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    [WebRequest requestCoverListData:^(NSDictionary *jsonDic) {
+       dispatch_async(dispatch_get_main_queue(), ^{
+           DDLogDebug(@"%@",jsonDic);
+           [MBProgressHUD hideHUDForView:self.view animated:YES];
+       });
+    }];
 }
 
 - (void)updateViewConstraints{
