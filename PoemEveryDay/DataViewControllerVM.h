@@ -9,6 +9,11 @@
 #import <Foundation/Foundation.h>
 #import "CoverListDataStruc.h"
 
+@class PoemDetailViewControllerVM;
+
 @interface DataViewControllerVM : NSObject
+@property (strong, nonatomic) CoverListDataStruc *dataObject;
+
+- (PoemDetailViewControllerVM *)getDetailViewModel;
 
 @end

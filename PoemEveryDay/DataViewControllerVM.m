@@ -8,7 +8,13 @@
 
 #import "DataViewControllerVM.h"
 #import "WebRequest.h"
+#import "PoemDetailViewControllerVM.h"
 
 @implementation DataViewControllerVM
+
+- (PoemDetailViewControllerVM *)getDetailViewModel{
+    PoemDetailViewControllerVM *detailViewModel = [[PoemDetailViewControllerVM alloc] initWithProgramID:_dataObject.programID];
+    return detailViewModel;
+}
 
 @end

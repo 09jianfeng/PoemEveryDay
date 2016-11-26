@@ -8,9 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
+@class DataViewControllerVM;
+
 @interface RootViewControllerVM : NSObject
 @property (nonatomic, copy) NSArray *coverListAry;
 
 - (void)requestCoverList:(void(^)(NSArray *list))compeletionBlock;
+
+- (DataViewControllerVM *)getDataVCViewModelWithIndex:(NSInteger)index;
 
 @end

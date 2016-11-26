@@ -123,6 +123,7 @@
                         <outlet property="imgView" destination="faT-8p-EWf" id="9lm-tt-WIv"/>
                         <outlet property="labAuthor" destination="ZnH-nd-maV" id="7bY-FQ-8d4"/>
                         <outlet property="labDate" destination="3HT-iP-kJT" id="Kdf-rg-7qk"/>
+                        <outlet property="labReciter" destination="vlo-tx-dG0" id="bJ6-qO-lcH"/>
                         <outlet property="labTitle" destination="j8g-kT-rQY" id="mvP-ss-yXa"/>
                     </connections>
                 </viewController>

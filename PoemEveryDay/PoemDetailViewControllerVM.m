@@ -8,6 +8,16 @@
 
 #import "PoemDetailViewControllerVM.h"
 
-@implementation PoemDetailViewControllerVM
+@implementation PoemDetailViewControllerVM{
+    NSInteger _programID;
+}
+
+- (instancetype)initWithProgramID:(NSInteger)programID{
+    self = [super init];
+    if (self) {
+        _programID = programID;
+    }
+    return self;
+}
 
 @end

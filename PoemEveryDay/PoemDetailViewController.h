@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+@class PoemDetailViewControllerVM;
+
 @interface PoemDetailViewController : UIViewController
+
+- (void)initControllerWithViewModel:(PoemDetailViewControllerVM *)viewModel;
 
 @end

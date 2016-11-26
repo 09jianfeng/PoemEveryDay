@@ -9,6 +9,7 @@
 #import "RootViewControllerVM.h"
 #import "WebRequest.h"
 #import "CoverListDataStruc.h"
+#import "DataViewControllerVM.h"
 
 @interface RootViewControllerVM()
 @property (nonatomic, strong) NSDictionary *coverListJsonDic;
@@ -47,11 +48,17 @@
         poemData.imageLink = covers[@"imgNew"];
         NSDictionary *guests = [poem[@"guests"] objectAtIndex:0];
         poemData.reciterName = guests[@"gName"];
-        poemData.imageLink = guests[@"imgNew"];
+        poemData.reciterIcon = guests[@"imgNew"];
         [coverListAry addObject:poemData];
     }
     
     _coverListAry = coverListAry;
+}
+
+- (DataViewControllerVM *)getDataVCViewModelWithIndex:(NSInteger)index{
+    DataViewControllerVM *viewModel = [DataViewControllerVM new];
+    viewModel.dataObject = _coverListAry[index];
+    return viewModel;
 }
 
 @end

@@ -12,7 +12,6 @@
 @class CoverListDataStruc;
 
 @interface DataViewController : UIViewController
-@property (strong, nonatomic) CoverListDataStruc *dataObject;
 @property (assign, nonatomic) NSInteger controllerIndex;
 
 - (void)initilizeViewWithViewModel:(DataViewControllerVM *)vm;

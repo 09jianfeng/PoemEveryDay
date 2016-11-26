@@ -7,13 +7,18 @@
 //
 
 #import "PoemDetailViewController.h"
+#import "PoemDetailViewControllerVM.h"
 
 @interface PoemDetailViewController ()
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollViewContentBase;
-
+@property (strong, nonatomic) PoemDetailViewControllerVM *viewModel;
 @end
 
 @implementation PoemDetailViewController
+
+- (void)initControllerWithViewModel:(PoemDetailViewControllerVM *)viewModel{
+    _viewModel = viewModel;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];

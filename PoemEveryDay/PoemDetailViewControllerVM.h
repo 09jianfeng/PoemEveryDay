@@ -10,4 +10,6 @@
 
 @interface PoemDetailViewControllerVM : NSObject
 
+- (instancetype)initWithProgramID:(NSInteger)programID;
+
 @end
