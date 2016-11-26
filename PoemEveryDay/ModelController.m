@@ -8,31 +8,26 @@
 
 #import "ModelController.h"
 #import "DataViewController.h"
-
-/*
- A controller object that manages a simple model -- a collection of month names.
- 
- The controller serves as the data source for the page view controller; it therefore implements pageViewController:viewControllerBeforeViewController: and pageViewController:viewControllerAfterViewController:.
- It also implements a custom method, viewControllerAtIndex: which is useful in the implementation of the data source methods, and in the initial configuration of the application.
- 
- There is no need to actually create view controllers for each page in advance -- indeed doing so incurs unnecessary overhead. Given the data model, these methods create, configure, and return a new view controller on demand.
- */
+#import "RootViewControllerVM.h"
 
 
 @interface ModelController ()
-
-@property (readonly, strong, nonatomic) NSArray *pageData;
+@property (strong, nonatomic) RootViewControllerVM *rootViewModel;
 @end
 
 @implementation ModelController
 
-- (instancetype)init {
+- (instancetype)initWithRootViewModel:(RootViewControllerVM *)viewModel{
     self = [super init];
     if (self) {
         // Create the data model.
-        NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-        _pageData = [[dateFormatter monthSymbols] copy];
+        _rootViewModel = viewModel;
     }
+    return self;
+}
+
+- (instancetype)init {
+    self = [self initWithRootViewModel:[RootViewControllerVM new]];
     return self;
 }
 

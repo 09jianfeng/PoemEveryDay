@@ -51,7 +51,6 @@ end
 def share_test_pods
     pod 'Expecta'
     pod 'OCMock'
-    pod 'Realm/Headers'
     
     inhibit_all_warnings!
 end

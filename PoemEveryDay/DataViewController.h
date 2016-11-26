@@ -8,11 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DataViewController : UIViewController
+@class DataViewControllerVM;
+@class CoverListDataStruc;
 
-@property (strong, nonatomic) IBOutlet UILabel *dataLabel;
-@property (strong, nonatomic) id dataObject;
+@interface DataViewController : UIViewController
+@property (strong, nonatomic) CoverListDataStruc *dataObject;
 @property (assign, nonatomic) NSInteger controllerIndex;
+
+- (void)initilizeViewWithViewModel:(DataViewControllerVM *)vm;
 
 @end
 

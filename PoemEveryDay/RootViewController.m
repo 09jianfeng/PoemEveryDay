@@ -10,9 +10,13 @@
 #import "ModelController.h"
 #import "DataViewController.h"
 #import "RootViewControllerVM.h"
+#import "MBProgressHUD.h"
+#import "FBKVOController.h"
 
 @interface RootViewController ()
 @property (readonly, strong, nonatomic) ModelController *modelController;
+@property (strong, nonatomic) RootViewControllerVM *rtViewModel;
+@property (strong, nonatomic) MBProgressHUD *mbProgressHUD;
 @end
 
 @implementation RootViewController
@@ -22,30 +26,18 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    // Configure the page view controller and add it as a child view controller.
-    self.pageViewController = [[UIPageViewController alloc] initWithTransitionStyle:UIPageViewControllerTransitionStyleScroll navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal options:nil];
-    self.pageViewController.delegate = self;
-
-    DataViewController *startingViewController = [self.modelController viewControllerAtIndex:0 storyboard:self.storyboard];
-    NSArray *viewControllers = @[startingViewController];
-    [self.pageViewController setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:nil];
-
-    self.pageViewController.dataSource = self.modelController;
-
-    [self addChildViewController:self.pageViewController];
-    [self.view addSubview:self.pageViewController.view];
-
-    // Set the page view controller's bounds using an inset rect so that self's view is visible around the edges of the pages.
-    CGRect pageViewRect = self.view.bounds;
-    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
-        pageViewRect = CGRectInset(pageViewRect, 40.0, 40.0);
-    }
-    self.pageViewController.view.frame = pageViewRect;
-    pageViewRect = CGRectInset(pageViewRect, 40.0, 40.0);
-
-    [self.pageViewController didMoveToParentViewController:self];
     
-    
+    _mbProgressHUD = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    [_mbProgressHUD showAnimated:YES];
+    WeakSelf
+    [self.rtViewModel requestCoverList:^(NSArray *list) {
+        if (list) {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [weakSelf initSubViewController:list];
+                [weakSelf.mbProgressHUD hideAnimated:YES];
+            });
+        }
+    }];
 }
 
 
@@ -54,12 +46,48 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)initSubViewController:(NSArray *)pageData{
+    // Configure the page view controller and add it as a child view controller.
+    self.pageViewController = [[UIPageViewController alloc] initWithTransitionStyle:UIPageViewControllerTransitionStyleScroll navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal options:nil];
+    self.pageViewController.delegate = self;
+    
+    self.modelController.pageData = pageData;
+    DataViewController *startingViewController = [self.modelController viewControllerAtIndex:0 storyboard:self.storyboard];
+    NSArray *viewControllers = @[startingViewController];
+    [self.pageViewController setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:nil];
+    
+    self.pageViewController.dataSource = self.modelController;
+    
+    [self addChildViewController:self.pageViewController];
+    [self.view addSubview:self.pageViewController.view];
+    
+    // Set the page view controller's bounds using an inset rect so that self's view is visible around the edges of the pages.
+    CGRect pageViewRect = self.view.bounds;
+    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
+        pageViewRect = CGRectInset(pageViewRect, 40.0, 40.0);
+    }
+    self.pageViewController.view.frame = pageViewRect;
+    pageViewRect = CGRectInset(pageViewRect, 40.0, 40.0);
+    
+    [self.pageViewController didMoveToParentViewController:self];
+
+}
+
+#pragma mark - lazy load var
+
+- (RootViewControllerVM *)rtViewModel{
+    if (!_rtViewModel) {
+        _rtViewModel = [RootViewControllerVM new];
+    }
+    
+    return _rtViewModel;
+}
 
 - (ModelController *)modelController {
     // Return the model controller object, creating it if necessary.
     // In more complex implementations, the model controller may be passed to the view controller.
     if (!_modelController) {
-        _modelController = [[ModelController alloc] init];
+        _modelController = [[ModelController alloc] initWithRootViewModel:self.rtViewModel];
     }
     return _modelController;
 }

@@ -17,15 +17,17 @@
 @implementation RootViewControllerVM{
 }
 
-- (void)requestCoverList:(NSInteger)controllerIndex{
+- (void)requestCoverList:(void(^)(NSArray *list))compeletionBlock;{
     WeakSelf
     [WebRequest requestCoverListData:1 pageNum:10 compeletionBlock:^(NSDictionary *jsonDic) {
         dispatch_async(dispatch_get_main_queue(), ^{
             DDLogDebug(@"%@",jsonDic);
             if (!jsonDic) {
+                compeletionBlock(nil);
                 return ;
             }
             weakSelf.coverListJsonDic = jsonDic;
+            compeletionBlock(weakSelf.coverListAry);
         });
     }];
 }
@@ -43,7 +45,7 @@
         poemData.summary = covers[@"summary"];
         poemData.title = covers[@"title"];
         poemData.imageLink = covers[@"imgNew"];
-        NSDictionary *guests = poem[@"guests"];
+        NSDictionary *guests = [poem[@"guests"] objectAtIndex:0];
         poemData.reciterName = guests[@"gName"];
         poemData.imageLink = guests[@"imgNew"];
         [coverListAry addObject:poemData];

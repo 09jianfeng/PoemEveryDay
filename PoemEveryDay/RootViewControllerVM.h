@@ -9,9 +9,8 @@
 #import <Foundation/Foundation.h>
 
 @interface RootViewControllerVM : NSObject
-
 @property (nonatomic, copy) NSArray *coverListAry;
 
-- (void)requestCoverList:(NSInteger)controllerIndex;
+- (void)requestCoverList:(void(^)(NSArray *list))compeletionBlock;
 
 @end

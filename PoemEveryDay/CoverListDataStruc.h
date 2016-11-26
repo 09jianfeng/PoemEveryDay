@@ -11,7 +11,7 @@
 @interface CoverListDataStruc : NSObject
 
 // poem summary data
-@property (nonatomic, strong)   UIImage *imageLink;
+@property (nonatomic, copy)     NSString *imageLink;
 @property (nonatomic, copy)     NSString *summary;
 @property (nonatomic, copy)     NSString *title;
 @property (nonatomic, copy)     NSString *reciterName;

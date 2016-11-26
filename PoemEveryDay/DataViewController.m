@@ -9,19 +9,31 @@
 #import "DataViewController.h"
 #import "MBProgressHUD.h"
 #import "DataViewControllerVM.h"
+#import "CoverListDataStruc.h"
+#import "UIImageView+WebCache.h"
 
 @interface DataViewController ()
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *imageViewHeigh;
-@property (strong, nonatomic) DataViewControllerVM *dataViewConVM;
+@property (weak, nonatomic) IBOutlet UILabel *labTitle;
+@property (weak, nonatomic) IBOutlet UILabel *labAuthor;
+@property (weak, nonatomic) IBOutlet UILabel *labDate;
+@property (weak, nonatomic) IBOutlet UIImageView *imgView;
+@property (strong, nonatomic) DataViewControllerVM *controllerVM;
 @end
 
 @implementation DataViewController
 
+- (void)dealloc{
+}
+
+- (void)initilizeViewWithViewModel:(DataViewControllerVM *)vm{
+    _controllerVM = vm;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    
-    [self addKVOObsever];
+    [_imgView sd_setImageWithURL:[NSURL URLWithString:_dataObject.imageLink] placeholderImage:[UIImage imageNamed:@"poem_default"]];
 }
 
 - (void)updateViewConstraints{
@@ -38,33 +50,6 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
 //    self.dataLabel.text = [self.dataObject description];
-}
-
-#pragma mark - kvo
-
-- (void)addKVOObsever{
-    [self addObserver:_dataViewConVM forKeyPath:@"image" options:NSKeyValueObservingOptionNew context:nil];
-    [self addObserver:_dataViewConVM forKeyPath:@"summary" options:NSKeyValueObservingOptionNew context:nil];
-    [self addObserver:_dataViewConVM forKeyPath:@"title" options:NSKeyValueObservingOptionNew context:nil];
-    [self addObserver:_dataViewConVM forKeyPath:@"reciter" options:NSKeyValueObservingOptionNew context:nil];
-    [self addObserver:_dataViewConVM forKeyPath:@"date" options:NSKeyValueObservingOptionNew context:nil];
-}
-
-- (void)removeKVOObsever{
-    [self removeObserver:_dataViewConVM forKeyPath:@"image"];
-    [self removeObserver:_dataViewConVM forKeyPath:@"summary"];
-    [self removeObserver:_dataViewConVM forKeyPath:@"title"];
-    [self removeObserver:_dataViewConVM forKeyPath:@"reciter"];
-    [self removeObserver:_dataViewConVM forKeyPath:@"date"];
-}
-
-- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context{
-    if (object != _dataViewConVM) {
-        return;
-    }
-    
-    
-    
 }
 
 

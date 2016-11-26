@@ -11,7 +11,7 @@
 
 @implementation WebRequest
 
-+ (void)requestCoverListData:(NSInteger)page pageNum:(NSInteger)pageNum compeletionBlock:(void(^)(NSDictionary *jsonDic))compeletionBlock;{
++ (void)requestCoverListData:(NSInteger)page pageNum:(NSInteger)pageNum compeletionBlock:(void(^)(NSDictionary *jsonDic))compeletionBlock{
     NSString *coverList = [URLCreator poemListURLString:pageNum count:pageNum];
     NSURLSession *shareSession = [NSURLSession sharedSession];
     NSURLSessionDataTask *dataTask = [shareSession dataTaskWithURL:[NSURL URLWithString:coverList] completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
