@@ -7,6 +7,7 @@
 //
 
 #import "PoemDetailViewControllerVM.h"
+#import "WebRequest.h"
 
 @implementation PoemDetailViewControllerVM{
     NSInteger _programID;
@@ -18,6 +19,12 @@
         _programID = programID;
     }
     return self;
+}
+
+- (void)requestDetailPoem:(void(^)(PoemDetailDataStruc *detailDataStruc))completionBlock{
+    [WebRequest requestPoemDetailWithID:_programID compeletionBlock:^(NSDictionary *jsonDic) {
+        completionBlock(nil);
+    }];
 }
 
 @end

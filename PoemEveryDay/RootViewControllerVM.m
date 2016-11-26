@@ -22,7 +22,6 @@
     WeakSelf
     [WebRequest requestCoverListData:1 pageNum:10 compeletionBlock:^(NSDictionary *jsonDic) {
         dispatch_async(dispatch_get_main_queue(), ^{
-            DDLogDebug(@"%@",jsonDic);
             if (!jsonDic) {
                 compeletionBlock(nil);
                 return ;
@@ -48,7 +47,6 @@
         poemData.imageLink = covers[@"imgNew"];
         NSDictionary *guests = [poem[@"guests"] objectAtIndex:0];
         poemData.reciterName = guests[@"gName"];
-        poemData.reciterIcon = guests[@"imgNew"];
         [coverListAry addObject:poemData];
     }
     

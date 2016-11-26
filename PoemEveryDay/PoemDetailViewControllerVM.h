@@ -8,8 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
+@class CoverListDataStruc;
+@class PoemDetailDataStruc;
+
 @interface PoemDetailViewControllerVM : NSObject
 
 - (instancetype)initWithProgramID:(NSInteger)programID;
+
+- (void)requestDetailPoem:(void(^)(PoemDetailDataStruc *detailDataStruc))completionBlock;
 
 @end

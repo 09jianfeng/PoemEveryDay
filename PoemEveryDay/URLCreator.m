@@ -24,7 +24,7 @@
                                                                                                        (CFStringRef)@"!*'();:@&=+$,/?%#[]",
                                                                                                        kCFStringEncodingUTF8 );
     NSString *url = [NSString stringWithFormat:@"%@%@",getCoverList,escapedUrlString];
-    NSLog(@"coverList %@",url);
+    DDLogInfo(@"coverList %@",url);
     return url;
 }
 
@@ -41,7 +41,7 @@
                                                                                                        (CFStringRef)@"!*'();:@&=+$,/?%#[]",
                                                                                                        kCFStringEncodingUTF8 );
     NSString *url = [NSString stringWithFormat:@"%@%@",searchFindByID,escapedUrlString];
-    NSLog(@"detailURL %@",url);
+    DDLogInfo(@"detailURL %@",url);
     return url;
 }
 

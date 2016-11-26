@@ -8,10 +8,13 @@
 
 #import "PoemDetailViewController.h"
 #import "PoemDetailViewControllerVM.h"
+#import "MBProgressHUD.h"
+#import "PoemDetailDataStruc.h"
 
 @interface PoemDetailViewController ()
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollViewContentBase;
 @property (strong, nonatomic) PoemDetailViewControllerVM *viewModel;
+@property (strong, nonatomic) MBProgressHUD *progressHUD;
 @end
 
 @implementation PoemDetailViewController
@@ -23,6 +26,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    _progressHUD = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    [_progressHUD showAnimated:YES];
+    [_viewModel requestDetailPoem:^(PoemDetailDataStruc *detailDataStruc) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [_progressHUD hideAnimated:YES];
+        });
+    }];
+    
 }
 
 - (void)didReceiveMemoryWarning {
