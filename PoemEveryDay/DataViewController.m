@@ -10,7 +10,7 @@
 #import "MBProgressHUD.h"
 #import "DataViewControllerVM.h"
 #import "CoverListDataStruc.h"
-#import "UIImageView+WebCache.h"
+//#import "UIImageView+WebCache.h"
 
 @interface DataViewController ()
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *imageViewHeigh;
@@ -33,7 +33,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    [_imgView sd_setImageWithURL:[NSURL URLWithString:_dataObject.imageLink] placeholderImage:[UIImage imageNamed:@"poem_default"]];
+//    [_imgView sd_setImageWithURL:[NSURL URLWithString:_dataObject.imageLink] placeholderImage:[UIImage imageNamed:@"poem_default"]];
 }
 
 - (void)updateViewConstraints{
