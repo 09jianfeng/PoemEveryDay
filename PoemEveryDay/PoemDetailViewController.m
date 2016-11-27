@@ -10,6 +10,7 @@
 #import "PoemDetailViewControllerVM.h"
 #import "MBProgressHUD.h"
 #import "PoemDetailDataStruc.h"
+#import "Masonry.h"
 
 @interface PoemDetailViewController ()
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollViewContentBase;
@@ -34,12 +35,20 @@
             [_progressHUD hideAnimated:YES];
         });
     }];
+}
+
+- (void)autoLayoutSubViews{
     
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (CGFloat)getHeightForString:(NSString *)string width:(CGFloat)width font:(UIFont *)font{
+    CGRect stringRect = [string boundingRectWithSize:CGSizeMake(width, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:font} context:nil];
+    return stringRect.size.height;
 }
 
 #pragma mark - even
