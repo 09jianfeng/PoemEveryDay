@@ -35,6 +35,15 @@
         dataStruc.poemTitle = jsonDic[@"data"][@"audio"][@"audioGps"][0][@"poetry"][@"title"];
         dataStruc.headerTitle = jsonDic[@"data"][@"title"];
         dataStruc.poemEnjoy = jsonDic[@"data"][@"poemProgramPenjoys"][0][@"poetryEnjoy"];
+        dataStruc.poemPictureEnjoy = jsonDic[@"data"][@"poemPicture"][@"imgNew"];
+        dataStruc.reciterName = jsonDic[@"data"][@"poemProgramGuestVos"][0][@"gName"];
+        dataStruc.reciterCareer = jsonDic[@"data"][@"poemProgramGuestVos"][0][@"typeName"];
+        dataStruc.reciterIcon = jsonDic[@"data"][@"poemProgramGuestVos"][0][@"imgNew"];
+        dataStruc.imageLink = jsonDic[@"data"][@"poemPicture"][@"imgNew"];
+        
+        CGFloat heigh = [jsonDic[@"data"][@"poemPicture"][@"imgHeight"] floatValue];
+        CGFloat width = [jsonDic[@"data"][@"poemPicture"][@"imgWidth"] floatValue];
+        dataStruc.imgHeighWidthRatio = heigh / width;
         
         completionBlock(dataStruc);
     }];

@@ -11,8 +11,7 @@
 @interface PoemDetailDataStruc : NSObject
 // poem summary data
 @property (nonatomic, copy)     NSString *imageLink;
-@property (nonatomic, copy)     NSString *imgHeigh;
-@property (nonatomic, copy)     NSString *imgWidth;
+@property (nonatomic, assign)     CGFloat imgHeighWidthRatio;
 @property (nonatomic, copy)     NSString *headerTitle;
 @property (nonatomic, copy)     NSString *reciterName;
 @property (nonatomic, copy)     NSString *reciterIcon;

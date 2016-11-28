@@ -28,6 +28,7 @@
 		2EB502371DE8195900A5FB13 /* RootViewControllerVM.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EB502361DE8195900A5FB13 /* RootViewControllerVM.m */; };
 		2EB502401DE81C9C00A5FB13 /* CoverListDataStruc.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EB5023F1DE81C9C00A5FB13 /* CoverListDataStruc.m */; };
 		2EB502481DE83E2100A5FB13 /* PoemDetailViewControllerVM.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EB502471DE83E2100A5FB13 /* PoemDetailViewControllerVM.m */; };
+		2EFFE2C41DEC215600A6D48F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EFFE2C31DEC215600A6D48F /* Foundation.framework */; };
 		786233B41DE9C72200E9BECC /* PoemDetailDataStruc.m in Sources */ = {isa = PBXBuildFile; fileRef = 786233B31DE9C72200E9BECC /* PoemDetailDataStruc.m */; };
 		EA25903303BAD8FBA33497A0 /* Pods_PoemEveryDayTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AD8E4660C5D3E0BB9220B6A /* Pods_PoemEveryDayTests.framework */; };
 /* End PBXBuildFile section */
@@ -91,6 +92,7 @@
 		2EB5023F1DE81C9C00A5FB13 /* CoverListDataStruc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoverListDataStruc.m; sourceTree = "<group>"; };
 		2EB502461DE83E2100A5FB13 /* PoemDetailViewControllerVM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PoemDetailViewControllerVM.h; sourceTree = "<group>"; };
 		2EB502471DE83E2100A5FB13 /* PoemDetailViewControllerVM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PoemDetailViewControllerVM.m; sourceTree = "<group>"; };
+		2EFFE2C31DEC215600A6D48F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		5FF43C879AD37AA951701666 /* Pods-PoemEveryDay.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoemEveryDay.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PoemEveryDay/Pods-PoemEveryDay.debug.xcconfig"; sourceTree = "<group>"; };
 		786233B21DE9C72200E9BECC /* PoemDetailDataStruc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PoemDetailDataStruc.h; sourceTree = "<group>"; };
 		786233B31DE9C72200E9BECC /* PoemDetailDataStruc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PoemDetailDataStruc.m; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2EFFE2C41DEC215600A6D48F /* Foundation.framework in Frameworks */,
 				0014A543CEA23FD9CB20B7D0 /* Pods_PoemEveryDay.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -303,6 +306,7 @@
 		87732102938175BDD2013965 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2EFFE2C31DEC215600A6D48F /* Foundation.framework */,
 				BCB22FA93BB1F4363314247F /* Pods_PoemEveryDay.framework */,
 				8AD8E4660C5D3E0BB9220B6A /* Pods_PoemEveryDayTests.framework */,
 			);
@@ -460,7 +464,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		2CAB6966C22FAAC43E09B134 /* [CP] Embed Pods Frameworks */ = {
@@ -520,7 +524,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		E20318B1D5D753FB33611E88 /* [CP] Copy Pods Resources */ = {

@@ -30,6 +30,7 @@
 @implementation DataViewController
 
 - (void)dealloc{
+    DDLogDebug(@"dataViewController dealloc",nil);
 }
 
 - (void)initilizeViewWithViewModel:(DataViewControllerVM *)vm{
