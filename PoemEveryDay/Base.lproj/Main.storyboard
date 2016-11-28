@@ -256,7 +256,7 @@
                                                     <constraint firstAttribute="width" constant="46" id="whg-eh-p4G"/>
                                                 </constraints>
                                             </imageView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8fK-Kt-D5U">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8fK-Kt-D5U">
                                                 <rect key="frame" x="8" y="20" width="50" height="50"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="U6W-9B-Z61"/>
@@ -281,16 +281,15 @@
                                                     <constraint firstAttribute="height" constant="12" id="PQd-G8-BEm"/>
                                                 </constraints>
                                             </view>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gBM-aT-cKu">
+                                            <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gBM-aT-cKu">
                                                 <rect key="frame" x="20" y="292" width="40" height="40"/>
-                                                <color key="backgroundColor" red="1" green="0.78401691029999998" blue="0.93883976930000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="40" id="aP3-Gh-hNL"/>
                                                     <constraint firstAttribute="height" constant="40" id="rX2-Mh-bCZ"/>
                                                 </constraints>
                                                 <state key="normal" title="Play" image="btn_play" backgroundImage="btn_play"/>
                                                 <connections>
-                                                    <action selector="btnPlayAudioPressed:" destination="PPU-k1-bfi" eventType="touchUpInside" id="Clm-gS-9fS"/>
+                                                    <action selector="btnPlayAudioPressed:" destination="PPU-k1-bfi" eventType="touchUpInside" id="eqB-MO-jTt"/>
                                                 </connections>
                                             </button>
                                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="gHe-4j-Joh">
@@ -369,7 +368,6 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="btnPlayAudio" destination="gBM-aT-cKu" id="jvb-fx-miK"/>
                         <outlet property="containView" destination="2TH-BQ-mRa" id="Pyi-l7-9uF"/>
                         <outlet property="poemAuthor" destination="qLc-HA-ZkB" id="Ujj-Q7-prE"/>
                         <outlet property="poemEnjoy" destination="g8h-Pb-b4U" id="vk2-b6-G3K"/>
@@ -395,7 +393,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="btn_play" width="40" height="40"/>
+        <image name="btn_play" width="120" height="120"/>
         <image name="poem_back_btn" width="50" height="50"/>
         <image name="poem_default.png" width="513" height="466"/>
     </resources>

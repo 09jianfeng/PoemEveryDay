@@ -38,7 +38,9 @@
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *poemHeighContrain;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *poemEnjoyHeighContrain;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *poemPictureHeigh;
+
 @property (assign, nonatomic) CGFloat hwRatio;
+@property (copy, nonatomic) NSString *audioURLString;
 
 
 @end
@@ -75,6 +77,7 @@
             _poemTextView.text = detailDataStruc.original;
             _poemEnjoyTextView.text = detailDataStruc.poemEnjoy;
             _hwRatio = detailDataStruc.imgHeighWidthRatio;
+            _audioURLString = detailDataStruc.musicLink;
             
             [self.view setNeedsUpdateConstraints];
             [self.view setNeedsLayout];
@@ -120,7 +123,8 @@
 }
 
 - (IBAction)btnPlayAudioPressed:(id)sender {
-    
+    NSLog(@"--------");
+    [_viewModel playerAudioWithURL:[NSURL URLWithString:_audioURLString]];
 }
 
 /*

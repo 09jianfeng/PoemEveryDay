@@ -9,9 +9,11 @@
 #import "PoemDetailViewControllerVM.h"
 #import "WebRequest.h"
 #import "PoemDetailDataStruc.h"
+#import <AVFoundation/AVFoundation.h>
 
 @implementation PoemDetailViewControllerVM{
     NSInteger _programID;
+    AVPlayer *_player;
 }
 
 - (instancetype)initWithProgramID:(NSInteger)programID{
@@ -45,8 +47,16 @@
         CGFloat width = [jsonDic[@"data"][@"poemPicture"][@"imgWidth"] floatValue];
         dataStruc.imgHeighWidthRatio = heigh / width;
         
+        dataStruc.musicLink = jsonDic[@"data"][@"audio"][@"musics"][0][@"audioNew"];
+        
         completionBlock(dataStruc);
     }];
+}
+
+- (void)playerAudioWithURL:(NSURL *)audioURL{
+    AVPlayerItem * songItem = [[AVPlayerItem alloc]initWithURL:audioURL];
+    _player = [[AVPlayer alloc]initWithPlayerItem:songItem];
+    [_player play];
 }
 
 @end

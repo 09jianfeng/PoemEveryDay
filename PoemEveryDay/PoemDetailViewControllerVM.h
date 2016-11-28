@@ -17,4 +17,6 @@
 
 - (void)requestDetailPoem:(void(^)(PoemDetailDataStruc *detailDataStruc))completionBlock;
 
+- (void)playerAudioWithURL:(NSURL *)audioURL;
+
 @end
