@@ -31,6 +31,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *poemEnjoy;
 @property (weak, nonatomic) IBOutlet UILabel *poemEnjoyAuthor;
 @property (weak, nonatomic) IBOutlet UITextView *poemEnjoyTextView;
+@property (weak, nonatomic) IBOutlet UIButton *btnPlayAudio;
+@property (weak, nonatomic) IBOutlet UIProgressView *progressAudio;
 
 // constrain
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *poemHeighContrain;
@@ -115,6 +117,10 @@
     [self dismissViewControllerAnimated:YES completion:^{
         
     }];
+}
+
+- (IBAction)btnPlayAudioPressed:(id)sender {
+    
 }
 
 /*
