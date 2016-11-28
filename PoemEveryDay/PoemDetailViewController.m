@@ -52,6 +52,10 @@
     // Do any additional setup after loading the view.
     
     _hwRatio = 1.2;
+    
+    _reciterIcon.layer.cornerRadius = CGRectGetWidth(_reciterIcon.frame)/2.0;
+    _reciterIcon.layer.masksToBounds = YES;
+    
     _progressHUD = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     [_progressHUD showAnimated:YES];
     [_viewModel requestDetailPoem:^(PoemDetailDataStruc *detailDataStruc) {
@@ -63,8 +67,8 @@
             _reciterName.text = detailDataStruc.reciterName;
             _reciterCareer.text = detailDataStruc.reciterCareer;
             _poemName.text = detailDataStruc.poemTitle;
-            _poemAuthor.text = detailDataStruc.author;
-            _poemEnjoyAuthor.text = @"jianfeng";
+            _poemAuthor.text = [NSString stringWithFormat:@"作者：%@",detailDataStruc.author];
+            _poemEnjoyAuthor.text = detailDataStruc.translator;
             
             _poemTextView.text = detailDataStruc.original;
             _poemEnjoyTextView.text = detailDataStruc.poemEnjoy;
@@ -79,8 +83,8 @@
 - (void)updateViewConstraints{
     [super updateViewConstraints];
     
-    CGFloat poemHeigh = [self getHeightForString:_poemTextView.text width:_poemTextView.frame.size.width font:[UIFont systemFontOfSize:14]];
-    CGFloat poemEnjoyHeigh = [self getHeightForString:_poemEnjoyTextView.text width:_poemEnjoyTextView.frame.size.width font:[UIFont systemFontOfSize:14]];
+    CGFloat poemHeigh = [self getHeightForString:_poemTextView.text width:_poemTextView.frame.size.width font:[UIFont systemFontOfSize:15]];
+    CGFloat poemEnjoyHeigh = [self getHeightForString:_poemEnjoyTextView.text width:_poemEnjoyTextView.frame.size.width font:[UIFont systemFontOfSize:15]];
     _poemHeighContrain.constant = poemHeigh;
     _poemEnjoyHeighContrain.constant = poemEnjoyHeigh;
     

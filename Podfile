@@ -19,7 +19,7 @@ def share_pods
     
     # 数据管理
     pod 'CocoaSecurity'
-    pod 'Realm’, ‘~> 2.0.4’
+    #pod 'Realm’, ‘~> 2.0.4’
     pod 'SSZipArchive'
     
     # UI

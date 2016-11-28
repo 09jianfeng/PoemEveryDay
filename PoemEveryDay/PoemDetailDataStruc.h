@@ -24,6 +24,7 @@
 @property (nonatomic, copy)     NSString *poemEnjoy;
 @property (nonatomic, copy)     NSString *poemPictureEnjoy;
 @property (nonatomic, copy)     NSString *poemmusicEnjoy;
+@property (nonatomic, copy)     NSString *poemEnjoyAuthor;
 @property (nonatomic, copy)     NSString *translator;
 @property (nonatomic, copy)     NSString *original;
 @property (nonatomic, copy)     NSString *author;

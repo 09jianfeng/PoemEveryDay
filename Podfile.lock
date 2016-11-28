@@ -37,9 +37,6 @@ PODS:
   - NYXImagesKit (2.3)
   - OCMock (3.3.1)
   - pop (1.0.9)
-  - Realm (2.0.4):
-    - Realm/Headers (= 2.0.4)
-  - Realm/Headers (2.0.4)
   - RegExCategories (1.0)
   - RESideMenu (4.0.7)
   - SDWebImage (3.8.2):
@@ -67,7 +64,6 @@ DEPENDENCIES:
   - NYXImagesKit
   - OCMock
   - pop
-  - Realm (~> 2.0.4)
   - RegExCategories
   - RESideMenu
   - SDWebImage
@@ -93,7 +89,6 @@ SPEC CHECKSUMS:
   NYXImagesKit: 8163e3335a40eaa173ca5bbbf81fafb57d3947eb
   OCMock: f3f61e6eaa16038c30caa5798c5e49d3307b6f22
   pop: f667631a5108a2e60d9e8797c9b32ddaf2080bce
-  Realm: 9da97f48365f8b99dd95c28d45ad8222d62e1775
   RegExCategories: e68befacacd5bda853c88f70ec745cb2d0cfb89c
   RESideMenu: f24c508404b49c667344c54aba7e590883533958
   SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
@@ -101,6 +96,6 @@ SPEC CHECKSUMS:
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
   YYText: 5c461d709e24d55a182d1441c41dc639a18a4849
 
-PODFILE CHECKSUM: 5f41dbdee769ca2cb532310e122f51a42c58b0c7
+PODFILE CHECKSUM: 1d43866588fc4cb0298883979654c9e418bd85a1
 
-COCOAPODS: 1.0.1
+COCOAPODS: 1.1.1
