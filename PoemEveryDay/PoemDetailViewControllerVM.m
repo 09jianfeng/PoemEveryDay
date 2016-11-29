@@ -9,8 +9,8 @@
 #import "PoemDetailViewControllerVM.h"
 #import "WebRequest.h"
 #import "PoemDetailDataStruc.h"
-#import <AVFoundation/AVFoundation.h>
 #import "FBKVOController.h"
+#import "PoemAudioPlayer.h"
 
 @interface PoemDetailViewControllerVM()
 @property (nonatomic, strong) FBKVOController *kvoController;
@@ -18,12 +18,10 @@
 
 @implementation PoemDetailViewControllerVM{
     NSInteger _programID;
-    AVPlayer *_player;
-    id _timeObserve;
+    PoemAudioPlayer *_audioPlayer;
 }
 
 - (void)dealloc{
-    [self removeObjectForPlayItem:_player.currentItem];
 }
 
 - (instancetype)initWithProgramID:(NSInteger)programID{
@@ -64,73 +62,31 @@
 }
 
 - (void)playerAudioWithURL:(NSURL *)audioURL{
-    [self removeObjectForPlayItem:_player.currentItem];
+    [self removeObserver];
     
-    AVPlayerItem * songItem = [[AVPlayerItem alloc]initWithURL:audioURL];
-    _player = [[AVPlayer alloc]initWithPlayerItem:songItem];
-    [self play];
-    [self addObserForPlayItem:songItem];
+    _audioPlayer = [[PoemAudioPlayer alloc] initWithAudioURL:audioURL];
+    [_audioPlayer play];
+    [self addObserer];
 }
 
-#pragma mark - avplayer 
-
-- (void)addObserForPlayItem:(AVPlayerItem *)songItem{
-    WeakSelf
-    _timeObserve = [_player addPeriodicTimeObserverForInterval:CMTimeMake(1.0, 1.0) queue:dispatch_get_main_queue() usingBlock:^(CMTime time) {
-        float current = CMTimeGetSeconds(time);
-        float total = CMTimeGetSeconds(songItem.duration);
-        if (current) {
-            weakSelf.progress = current / total;
-            weakSelf.playTime = [NSString stringWithFormat:@"%.f",current];
-            weakSelf.playDuration = [NSString stringWithFormat:@"%.2f",total];
-            DDLogDebug(@"progress %f - current:%@ - total:%@",weakSelf.progress,weakSelf.playTime,weakSelf.playDuration);
-        }
+#pragma mark - kvo for audioPlayer
+- (void)addObserer{
+    _kvoController = [FBKVOController controllerWithObserver:self];
+    [_kvoController observe:_audioPlayer keyPath:@"progress" options:NSKeyValueObservingOptionNew block:^(PoemDetailViewControllerVM *observer, PoemAudioPlayer *object, NSDictionary<NSString *,id> * _Nonnull change) {
+        observer.progress = object.progress;
     }];
     
-    // create KVO controller with observer
-    FBKVOController *KVOController = [FBKVOController controllerWithObserver:self];
-    self.kvoController = KVOController;
-    // observe clock date property
-    [self.kvoController observe:songItem keyPath:@"status" options:NSKeyValueObservingOptionNew block:^(PoemDetailViewControllerVM *viewModel, AVPlayerItem *songItem, NSDictionary *change) {
-        
-        switch (songItem.status) {
-            case AVPlayerItemStatusReadyToPlay:
-                NSLog(@"ready to play");
-                break;
-                
-            case AVPlayerItemStatusUnknown:
-                NSLog(@"AVPlayerItemStatusUnknown to play");
-                break;
-                
-            case AVPlayerItemStatusFailed:
-                NSLog(@"AVPlayerItemStatusFailed to play");
-                break;
-                
-            default:
-                break;
-        }
+    [_kvoController observe:_audioPlayer keyPath:@"playDuration" options:NSKeyValueObservingOptionNew block:^(PoemDetailViewControllerVM *observer, PoemAudioPlayer *object, NSDictionary<NSString *,id> * _Nonnull change) {
+        observer.playDuration = object.playDuration;
     }];
     
-    [self.kvoController observe:songItem keyPath:@"loadedTimeRanges" options:NSKeyValueObservingOptionNew block:^(PoemDetailViewControllerVM *viewModel, AVPlayerItem *songItem, NSDictionary *change) {
-        NSArray * array = songItem.loadedTimeRanges;
-        CMTimeRange timeRange = [array.firstObject CMTimeRangeValue]; //本次缓冲的时间范围
-        NSTimeInterval totalBuffer = CMTimeGetSeconds(timeRange.start) + CMTimeGetSeconds(timeRange.duration); //缓冲总长度
-        NSLog(@"共缓冲%.2f",totalBuffer);
+    [_kvoController observe:_audioPlayer keyPath:@"playTime" options:NSKeyValueObservingOptionNew block:^(PoemDetailViewControllerVM *observer, PoemAudioPlayer * object, NSDictionary<NSString *,id> * _Nonnull change) {
+        observer.playTime = object.playTime;
     }];
-    
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(playbackFinished:) name:AVPlayerItemDidPlayToEndTimeNotification object:songItem];
 }
 
-- (void)removeObjectForPlayItem:(AVPlayerItem *)songItem{
-    if (_kvoController) {
-        [_kvoController unobserve:songItem];
-    }
-    
-    if (_timeObserve) {
-        [_player removeTimeObserver:_timeObserve];
-    }
-    
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
+- (void)removeObserver{
+    [_kvoController unobserve:_audioPlayer];
 }
 
 #pragma mark - play handle
@@ -140,11 +96,11 @@
 }
 
 - (void)pause{
-    [_player pause];
+    [_audioPlayer pause];
 }
 
 - (void)play{
-    [_player play];
+    [_audioPlayer play];
 }
 
 @end
