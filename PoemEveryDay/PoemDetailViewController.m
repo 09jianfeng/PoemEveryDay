@@ -12,6 +12,7 @@
 #import "PoemDetailDataStruc.h"
 #import "Masonry.h"
 #import "UIImageView+WebCache.h"
+#import "FBKVOController.h"
 
 @interface PoemDetailViewController ()
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollViewContentBase;
@@ -33,6 +34,8 @@
 @property (weak, nonatomic) IBOutlet UITextView *poemEnjoyTextView;
 @property (weak, nonatomic) IBOutlet UIButton *btnPlayAudio;
 @property (weak, nonatomic) IBOutlet UIProgressView *progressAudio;
+@property (weak, nonatomic) IBOutlet UILabel *labelProgressTime;
+@property (copy, nonatomic) NSString *totalTime;
 
 // constrain
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *poemHeighContrain;
@@ -45,10 +48,19 @@
 
 @end
 
-@implementation PoemDetailViewController
+@implementation PoemDetailViewController{
+    FBKVOController *_kvoController;
+}
+
+
+- (void)dealloc{
+    DDLogDebug(@"PoemDetailViewController");
+    [self removeObser];
+}
 
 - (void)initControllerWithViewModel:(PoemDetailViewControllerVM *)viewModel{
     _viewModel = viewModel;
+    _totalTime = @"00:00";
 }
 
 - (void)viewDidLoad {
@@ -83,6 +95,8 @@
             [self.view setNeedsLayout];
         });
     }];
+    
+    [self UIKVOUpdate];
 }
 
 - (void)updateViewConstraints{
@@ -107,6 +121,32 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - UIKVO
+
+- (void)UIKVOUpdate{
+    _kvoController = [FBKVOController controllerWithObserver:self];
+    [_kvoController observe:_viewModel keyPath:@"progress" options:NSKeyValueObservingOptionNew block:^(PoemDetailViewController *observer, PoemDetailViewControllerVM *object, NSDictionary<NSString *,id> * _Nonnull change) {
+        observer.progressAudio.progress = object.progress;
+    }];
+    
+    [_kvoController observe:_viewModel keyPath:@"playDuration" options:NSKeyValueObservingOptionNew block:^(PoemDetailViewController *observer, PoemDetailViewControllerVM *object, NSDictionary<NSString *,id> * _Nonnull change) {
+        int total = [object.playDuration intValue];
+        observer.totalTime = [NSString stringWithFormat:@"%02d:%02d",total/60,total%60];
+        
+        int current  = [object.playTime intValue];
+        observer.labelProgressTime.text = [NSString stringWithFormat:@"%02d:%02d/%@",current/60,current%60,observer.totalTime];
+    }];
+    
+    [_kvoController observe:_viewModel keyPath:@"playTime" options:NSKeyValueObservingOptionNew block:^(PoemDetailViewController *observer, PoemDetailViewControllerVM *object, NSDictionary<NSString *,id> * _Nonnull change) {
+        int current  = [object.playTime intValue];
+        observer.labelProgressTime.text = [NSString stringWithFormat:@"%02d:%02d/%@",current/60,current%60,observer.totalTime];
+    }];
+}
+
+- (void)removeObser{
+    [_kvoController unobserve:_viewModel];
 }
 
 - (CGFloat)getHeightForString:(NSString *)string width:(CGFloat)width font:(UIFont *)font{

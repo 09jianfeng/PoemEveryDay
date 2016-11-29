@@ -11,6 +11,7 @@
 @class PoemDetailViewControllerVM;
 
 @interface PoemDetailViewController : UIViewController
+@property (nonatomic, assign) CGFloat playPropress;
 
 - (void)initControllerWithViewModel:(PoemDetailViewControllerVM *)viewModel;
 

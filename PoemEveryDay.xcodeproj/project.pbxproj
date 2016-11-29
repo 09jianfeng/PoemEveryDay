@@ -24,6 +24,7 @@
 		2E4EFCF01DE59DFF00D00AB8 /* poem_default.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E4EFCEF1DE59DFF00D00AB8 /* poem_default.png */; };
 		2E4EFCF71DE6831800D00AB8 /* PoemDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E4EFCF61DE6831800D00AB8 /* PoemDetailViewController.m */; };
 		2EAB91311DED1EB100B02982 /* UIViewScrollContain.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EAB91301DED1EB100B02982 /* UIViewScrollContain.m */; };
+		2EAB913D1DED79FF00B02982 /* AudioPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EAB913C1DED79FF00B02982 /* AudioPlayer.m */; };
 		2EB5022C1DE6BF5F00A5FB13 /* WebRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EB5022B1DE6BF5F00A5FB13 /* WebRequest.m */; };
 		2EB502321DE7E50D00A5FB13 /* DataViewControllerVM.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EB502311DE7E50D00A5FB13 /* DataViewControllerVM.m */; };
 		2EB502371DE8195900A5FB13 /* RootViewControllerVM.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EB502361DE8195900A5FB13 /* RootViewControllerVM.m */; };
@@ -83,6 +84,8 @@
 		2E4EFCF61DE6831800D00AB8 /* PoemDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PoemDetailViewController.m; sourceTree = "<group>"; };
 		2EAB912F1DED1EB100B02982 /* UIViewScrollContain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIViewScrollContain.h; sourceTree = "<group>"; };
 		2EAB91301DED1EB100B02982 /* UIViewScrollContain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIViewScrollContain.m; sourceTree = "<group>"; };
+		2EAB913B1DED79FF00B02982 /* AudioPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioPlayer.h; sourceTree = "<group>"; };
+		2EAB913C1DED79FF00B02982 /* AudioPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioPlayer.m; sourceTree = "<group>"; };
 		2EB5022A1DE6BF5F00A5FB13 /* WebRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebRequest.h; sourceTree = "<group>"; };
 		2EB5022B1DE6BF5F00A5FB13 /* WebRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebRequest.m; sourceTree = "<group>"; };
 		2EB5022E1DE7D1F800A5FB13 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = SOURCE_ROOT; };
@@ -232,6 +235,8 @@
 				2EB5023A1DE81C3200A5FB13 /* NetWork */,
 				2E4EFCE71DE56C8600D00AB8 /* NSData+Base64AES128CBC.h */,
 				2E4EFCE81DE56C8600D00AB8 /* NSData+Base64AES128CBC.m */,
+				2EAB913B1DED79FF00B02982 /* AudioPlayer.h */,
+				2EAB913C1DED79FF00B02982 /* AudioPlayer.m */,
 			);
 			name = Mode;
 			sourceTree = "<group>";
@@ -561,6 +566,7 @@
 				2EAB91311DED1EB100B02982 /* UIViewScrollContain.m in Sources */,
 				2EB502481DE83E2100A5FB13 /* PoemDetailViewControllerVM.m in Sources */,
 				2EB502371DE8195900A5FB13 /* RootViewControllerVM.m in Sources */,
+				2EAB913D1DED79FF00B02982 /* AudioPlayer.m in Sources */,
 				2E4EFCEC1DE595B500D00AB8 /* URLCreator.m in Sources */,
 				2E4EFCB01DE52B9A00D00AB8 /* AppDelegate.m in Sources */,
 				2EB5022C1DE6BF5F00A5FB13 /* WebRequest.m in Sources */,

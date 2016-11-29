@@ -12,6 +12,9 @@
 @class PoemDetailDataStruc;
 
 @interface PoemDetailViewControllerVM : NSObject
+@property (nonatomic, assign) CGFloat progress;
+@property (nonatomic, copy) NSString *playTime;
+@property (nonatomic, copy) NSString *playDuration;
 
 - (instancetype)initWithProgramID:(NSInteger)programID;
 

@@ -301,13 +301,25 @@
                                                     <constraint firstAttribute="height" constant="2" id="t56-Vm-AvT"/>
                                                 </constraints>
                                             </progressView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00/3:54" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wwH-0U-t4F">
+                                                <rect key="frame" x="239" y="313" width="116" height="21"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="116" id="bWU-Xs-PL6"/>
+                                                    <constraint firstAttribute="height" constant="21" id="hR0-GQ-bxd"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstItem="k7F-7Y-j7M" firstAttribute="leading" secondItem="2TH-BQ-mRa" secondAttribute="leading" id="3MN-Zn-7yz"/>
+                                            <constraint firstItem="wwH-0U-t4F" firstAttribute="top" secondItem="gHe-4j-Joh" secondAttribute="bottom" constant="2" id="3wF-8l-bWA"/>
                                             <constraint firstItem="p2p-fR-nXQ" firstAttribute="top" secondItem="ES1-Sm-Oet" secondAttribute="bottom" id="6Dy-lb-bTg"/>
                                             <constraint firstItem="8fK-Kt-D5U" firstAttribute="leading" secondItem="2TH-BQ-mRa" secondAttribute="leading" constant="8" id="7QX-M5-MlW"/>
                                             <constraint firstItem="mfW-fE-O3M" firstAttribute="top" secondItem="p2p-fR-nXQ" secondAttribute="bottom" constant="150" id="7ZY-og-A5Z"/>
+                                            <constraint firstAttribute="trailing" secondItem="wwH-0U-t4F" secondAttribute="trailing" constant="20" id="DDf-wx-72Y"/>
                                             <constraint firstItem="hHT-P1-2FW" firstAttribute="top" secondItem="2TH-BQ-mRa" secondAttribute="top" constant="20" id="Ggd-SF-Pj4"/>
                                             <constraint firstItem="qLc-HA-ZkB" firstAttribute="leading" secondItem="2TH-BQ-mRa" secondAttribute="leading" constant="30" id="IIv-Lc-gMY"/>
                                             <constraint firstItem="C51-Xd-oEU" firstAttribute="leading" secondItem="2TH-BQ-mRa" secondAttribute="leading" id="ItO-Qj-BAz"/>
@@ -372,6 +384,7 @@
                     </view>
                     <connections>
                         <outlet property="containView" destination="2TH-BQ-mRa" id="Pyi-l7-9uF"/>
+                        <outlet property="labelProgressTime" destination="wwH-0U-t4F" id="4cU-dy-N7e"/>
                         <outlet property="poemAuthor" destination="qLc-HA-ZkB" id="Ujj-Q7-prE"/>
                         <outlet property="poemEnjoy" destination="g8h-Pb-b4U" id="vk2-b6-G3K"/>
                         <outlet property="poemEnjoyAuthor" destination="59p-JY-MFR" id="gnv-UN-EFP"/>
