@@ -54,7 +54,7 @@
 
 
 - (void)dealloc{
-    DDLogDebug(@"PoemDetailViewController");
+    DDLogDebug(@"PoemDetailViewController dealloc");
     [self removeObser];
 }
 
