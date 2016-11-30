@@ -22,6 +22,7 @@
 }
 
 - (void)dealloc{
+    DDLogDebug(@"PoemDetailViewControllerVM dealloc");
 }
 
 - (instancetype)initWithProgramID:(NSInteger)programID{
@@ -63,11 +64,18 @@
 }
 
 - (void)playerAudioWithURL:(NSURL *)audioURL{
-    [self removeObserver];
+    if (!_audioPlayer) {
+        _audioPlayer = [[PoemAudioPlayer alloc] initWithAudioURL:audioURL];
+        [_audioPlayer play];
+        [self addObserer];
+    }
     
-    _audioPlayer = [[PoemAudioPlayer alloc] initWithAudioURL:audioURL];
-    [_audioPlayer play];
-    [self addObserer];
+    if (_playerStatus == PoemAudioPlayerStatusPlaying) {
+        [self pause];
+    }else{
+        [self play];
+    }
+    
 }
 
 #pragma mark - kvo for audioPlayer
@@ -83,6 +91,10 @@
     
     [_kvoController observe:_audioPlayer keyPath:@"playTime" options:NSKeyValueObservingOptionNew block:^(PoemDetailViewControllerVM *observer, PoemAudioPlayer * object, NSDictionary<NSString *,id> * _Nonnull change) {
         observer.playTime = object.playTime;
+    }];
+    
+    [_kvoController observe:_audioPlayer keyPath:@"playerStatus" options:NSKeyValueObservingOptionNew|NSKeyValueObservingOptionOld block:^(PoemDetailViewControllerVM *observer, PoemAudioPlayer * object, NSDictionary<NSString *,id> * _Nonnull change) {
+        observer.playerStatus = object.playerStatus;
     }];
 }
 
@@ -103,5 +115,4 @@
 - (void)play{
     [_audioPlayer play];
 }
-
 @end

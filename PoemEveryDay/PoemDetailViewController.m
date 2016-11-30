@@ -36,6 +36,7 @@
 @property (weak, nonatomic) IBOutlet UIProgressView *progressAudio;
 @property (weak, nonatomic) IBOutlet UILabel *labelProgressTime;
 @property (copy, nonatomic) NSString *totalTime;
+@property (weak, nonatomic) IBOutlet UIButton *btnPlay;
 
 // constrain
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *poemHeighContrain;
@@ -146,6 +147,14 @@
         int current  = [object.playTime intValue];
         observer.labelProgressTime.text = [NSString stringWithFormat:@"%02d:%02d/%@",current/60,current%60,observer.totalTime];
     }];
+    
+    [_kvoController observe:_viewModel keyPath:@"playerStatus" options:NSKeyValueObservingOptionNew block:^(PoemDetailViewController *observer, PoemDetailViewControllerVM *object, NSDictionary<NSString *,id> * _Nonnull change) {
+        if (object.playerStatus == PoemAudioPlayerStatusPlaying) {
+            [observer.btnPlay setImage:[UIImage imageNamed:@"btn_pause"] forState:UIControlStateNormal];
+        }else{
+            [observer.btnPlay setImage:[UIImage imageNamed:@"btn_play"] forState:UIControlStateNormal];
+        }
+    }];
 }
 
 - (void)removeObser{
@@ -166,7 +175,6 @@
 }
 
 - (IBAction)btnPlayAudioPressed:(id)sender {
-    NSLog(@"--------");
     [_viewModel playerAudioWithURL:[NSURL URLWithString:_audioURLString]];
 }
 

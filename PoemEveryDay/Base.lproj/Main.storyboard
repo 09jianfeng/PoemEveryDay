@@ -377,6 +377,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="btnPlay" destination="gBM-aT-cKu" id="lSz-kr-I7t"/>
                         <outlet property="containView" destination="2TH-BQ-mRa" id="Pyi-l7-9uF"/>
                         <outlet property="labelProgressTime" destination="wwH-0U-t4F" id="4cU-dy-N7e"/>
                         <outlet property="poemAuthor" destination="qLc-HA-ZkB" id="Ujj-Q7-prE"/>

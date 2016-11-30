@@ -7,12 +7,22 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <AVFoundation/AVFoundation.h>
+
+typedef NS_ENUM(NSInteger, PoemAudioPlayerStatus) {
+    PoemAudioPlayerStatusPaused,
+    PoemAudioPlayerStatusLoadingData,
+    PoemAudioPlayerStatusPlaying,
+    PoemAudioPlayerStatusFail
+};
 
 @interface PoemAudioPlayer : NSObject
+
 @property (nonatomic, assign) CGFloat progress;
 @property (nonatomic, copy) NSString *playTime;
 @property (nonatomic, copy) NSString *playDuration;
 @property (nonatomic, assign) CGFloat totalBuffer;
+@property (nonatomic, assign) PoemAudioPlayerStatus playerStatus;
 
 - (instancetype)initWithAudioURL:(NSURL *)audioURL NS_DESIGNATED_INITIALIZER;
 

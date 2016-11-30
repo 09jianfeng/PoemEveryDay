@@ -7,8 +7,10 @@
 //
 
 #import "PoemAudioPlayer.h"
-#import <AVFoundation/AVFoundation.h>
 #import "FBKVOController.h"
+
+@interface PoemAudioPlayer()
+@end
 
 @implementation PoemAudioPlayer{
     NSInteger _programID;
@@ -29,6 +31,7 @@
         _audioURL = audioURL;
         AVPlayerItem * songItem = [[AVPlayerItem alloc] initWithURL:audioURL];
         _player = [[AVPlayer alloc] initWithPlayerItem:songItem];
+        self.playerStatus = PoemAudioPlayerStatusLoadingData;
         [self addObserForPlayItem:songItem];
     }
     return self;
@@ -48,15 +51,26 @@
 }
 
 - (void)play{
+    
+    if (self.playerStatus == PoemAudioPlayerStatusFail) {
+        [self restart];
+        return;
+    }
+    
     [_player play];
+    self.playerStatus = PoemAudioPlayerStatusLoadingData;
+    
+    if (self.totalBuffer > [self.playTime floatValue]) {
+        self.playerStatus = PoemAudioPlayerStatusPlaying;
+    }
 }
 
 - (void)pause{
     [_player pause];
+    self.playerStatus = PoemAudioPlayerStatusPaused;
 }
 
 #pragma mark - private
-
 - (void)removeObjectForPlayItem:(AVPlayerItem *)songItem{
     if (_kvoController) {
         [_kvoController unobserve:songItem];
@@ -86,11 +100,13 @@
     FBKVOController *KVOController = [FBKVOController controllerWithObserver:self];
     _kvoController = KVOController;
     // observe clock date property
-    [_kvoController observe:songItem keyPath:@"status" options:NSKeyValueObservingOptionNew block:^(PoemAudioPlayer *viewModel, AVPlayerItem *songItem, NSDictionary *change) {
+    [_kvoController observe:songItem keyPath:@"status" options:NSKeyValueObservingOptionNew block:^(PoemAudioPlayer *audioPlayer, AVPlayerItem *songItem, NSDictionary *change) {
         
         switch (songItem.status) {
             case AVPlayerItemStatusReadyToPlay:
+                audioPlayer.playerStatus = PoemAudioPlayerStatusPlaying;
                 DDLogDebug(@"ready to play");
+                
                 break;
                 
             case AVPlayerItemStatusUnknown:
@@ -99,6 +115,7 @@
                 
             case AVPlayerItemStatusFailed:
                 DDLogDebug(@"AVPlayerItemStatusFailed to play");
+                audioPlayer.playerStatus = PoemAudioPlayerStatusFail;
                 break;
                 
             default:
@@ -119,6 +136,7 @@
 
 - (void)playbackFinished:(NSNotification *)notice {
     DDLogDebug(@"finish play");
+    self.playerStatus = PoemAudioPlayerStatusPaused;
 }
 
 @end

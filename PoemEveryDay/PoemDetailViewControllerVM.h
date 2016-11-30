@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "PoemAudioPlayer.h"
 
 @class CoverListDataStruc;
 @class PoemDetailDataStruc;
@@ -15,6 +16,7 @@
 @property (nonatomic, assign) CGFloat progress;
 @property (nonatomic, copy) NSString *playTime;
 @property (nonatomic, copy) NSString *playDuration;
+@property (nonatomic, assign) PoemAudioPlayerStatus playerStatus;
 
 - (instancetype)initWithProgramID:(NSInteger)programID;
 
