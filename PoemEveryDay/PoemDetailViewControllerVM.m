@@ -35,6 +35,7 @@
 - (void)requestDetailPoem:(void(^)(PoemDetailDataStruc *detailDataStruc))completionBlock{
     [WebRequest requestPoemDetailWithID:_programID compeletionBlock:^(NSDictionary *jsonDic) {
         if (!jsonDic) {
+            completionBlock(nil);
             return ;
         }
         

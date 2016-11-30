@@ -12,7 +12,6 @@
 #import "CoverListDataStruc.h"
 #import "UIImageView+WebCache.h"
 #import "PoemDetailViewController.h"
-#import "FBKVOController.h"
 
 @interface DataViewController ()
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *imageViewHeigh;
@@ -23,8 +22,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *labReciter;
 @property (strong, nonatomic) DataViewControllerVM *viewModel;
 @property (strong, nonatomic) CoverListDataStruc *dataObject;
-
-@property (strong, nonatomic) FBKVOController *kvoController;
 @end
 
 @implementation DataViewController
@@ -36,17 +33,6 @@
 - (void)initilizeViewWithViewModel:(DataViewControllerVM *)vm{
     _viewModel = vm;
     _dataObject = vm.dataObject;
-    
-    // create KVO controller with observer
-    FBKVOController *KVOController = [FBKVOController controllerWithObserver:self];
-    self.kvoController = KVOController;
-    
-//    // observe clock date property
-//    [self.kvoController observe:_controllerVM keyPath:@"dataObject" options:NSKeyValueObservingOptionInitial|NSKeyValueObservingOptionNew block:^(DataViewController *viewController, DataViewControllerVM *viewModel, NSDictionary *change) {
-//        
-//        // update clock view with new value
-//        viewController.dataObject = viewModel.dataObject;
-//    }];
 }
 
 - (void)viewDidLoad {
@@ -77,14 +63,22 @@
 
 
 #pragma mark - Navigation
+- (IBAction)pictureTap:(id)sender {
+    PoemDetailViewController *detailViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"PoemDetailViewController"];
+    [detailViewController initControllerWithViewModel:[_viewModel getDetailViewModel]];
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-// Get the new view controller using [segue destinationViewController].
-// Pass the selected object to the new view controller.
-    PoemDetailViewController *poemDetailVC = [segue destinationViewController];
-    [poemDetailVC initControllerWithViewModel:[_viewModel getDetailViewModel]];
+    [self presentViewController:detailViewController animated:NO completion:^{
+        
+    }];
 }
 
+//// In a storyboard-based application, you will often want to do a little preparation before navigation
+//- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+//// Get the new view controller using [segue destinationViewController].
+//// Pass the selected object to the new view controller.
+//    PoemDetailViewController *poemDetailVC = [segue destinationViewController];
+//    [poemDetailVC initControllerWithViewModel:[_viewModel getDetailViewModel]];
+//}
+//
 
 @end

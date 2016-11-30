@@ -66,7 +66,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
+}
+
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
     _hwRatio = 1.2;
     
     _reciterIcon.layer.cornerRadius = CGRectGetWidth(_reciterIcon.frame)/2.0;
