@@ -28,6 +28,8 @@
     // Do any additional setup after loading the view, typically from a nib.
     
     _mbProgressHUD = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    _mbProgressHUD.detailsLabel.text = @"loading...";
+    _mbProgressHUD.backgroundColor = [UIColor grayColor];
     [_mbProgressHUD showAnimated:YES];
     WeakSelf
     [self.rtViewModel requestCoverList:^(NSArray *list) {
@@ -35,6 +37,10 @@
             dispatch_async(dispatch_get_main_queue(), ^{
                 [weakSelf initSubViewController:list];
                 [weakSelf.mbProgressHUD hideAnimated:YES];
+            });
+        }else{
+            dispatch_async(dispatch_get_main_queue(), ^{
+               _mbProgressHUD.detailsLabel.text = @"加载失败，请检查网络然后重试";
             });
         }
     }];

@@ -21,12 +21,23 @@
                     <view key="view" contentMode="scaleToFill" id="502-Ir-ELC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="poem_start.png" translatesAutoresizingMaskIntoConstraints="NO" id="yKh-nc-RM8">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" red="0.60000002379999995" green="0.40000000600000002" blue="0.20000000300000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="yKh-nc-RM8" secondAttribute="trailing" id="0a2-ar-4Za"/>
+                            <constraint firstItem="yKh-nc-RM8" firstAttribute="leading" secondItem="502-Ir-ELC" secondAttribute="leading" id="5nn-Zm-1ZG"/>
+                            <constraint firstItem="yKh-nc-RM8" firstAttribute="bottom" secondItem="IfR-02-kHw" secondAttribute="top" id="wDM-Zc-olm"/>
+                            <constraint firstItem="yKh-nc-RM8" firstAttribute="top" secondItem="502-Ir-ELC" secondAttribute="top" id="zXi-op-Ej9"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q3h-pU-vEd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-101" y="-243"/>
+            <point key="canvasLocation" x="-101.59999999999999" y="-243.32833583208398"/>
         </scene>
         <!--Data View Controller-->
         <scene sceneID="snT-py-3hH">
@@ -407,5 +418,6 @@
         <image name="btn_play" width="66" height="66"/>
         <image name="poem_back_btn" width="50" height="50"/>
         <image name="poem_default.png" width="513" height="466"/>
+        <image name="poem_start.png" width="750" height="1334"/>
     </resources>
 </document>
