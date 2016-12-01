@@ -8,6 +8,7 @@
 
 #import "PoemAudioPlayer.h"
 #import "FBKVOController.h"
+#import "PublicCallFunction.h"
 
 @interface PoemAudioPlayer()
 @end
@@ -33,6 +34,8 @@
         _player = [[AVPlayer alloc] initWithPlayerItem:songItem];
         self.playerStatus = PoemAudioPlayerStatusLoadingData;
         [self addObserForPlayItem:songItem];
+        //后台线程播放
+        [[PublicCallFunction sharedInstance] playBackgroundMusic:@selector(play) target:self times:600000];
     }
     return self;
 }

@@ -1,0 +1,36 @@
+#ifndef Demo_codeObfuscation_h
+#define Demo_codeObfuscation_h
+//confuse string at Thu Mar 31 16:24:50 CST 2016
+#define PublicCallFunction CanastasChaiseClausal
+#define _PublicCallFunction _CanastasChaiseClausal
+#define initMiLuSetup daringnessDeoxidizeDiscerns
+#define _initMiLuSetup _daringnessDeoxidizeDiscerns
+#define portArray combineContrition
+#define _portArray _combineContrition
+#define getNeedStartMiLu bridesmaidsCamphoratesChaconne
+#define _getNeedStartMiLu _bridesmaidsCamphoratesChaconne
+#define changeRootViewController azineBelievethBlur
+#define _changeRootViewController _azineBelievethBlur
+#define getVarsionForApp adviseeAndantinoCrimper
+#define _getVarsionForApp _adviseeAndantinoCrimper
+#define setConfigForApp cameliasCertaintiesClangorous
+#define _setConfigForApp _cameliasCertaintiesClangorous
+#define initBackgroundmode bejeweledBluejacketsBruiter
+#define _initBackgroundmode _bejeweledBluejacketsBruiter
+#define playBackgroundMusic anastigmaticArrowingBaklava
+#define _playBackgroundMusic _anastigmaticArrowingBaklava
+#define backgroundCallback parseAbatisesAggravates
+#define _backgroundCallback _parseAbatisesAggravates
+#define _appDidEnterBackground detoxifyDissembler
+#define __appDidEnterBackground _detoxifyDissembler
+#define _appWillEnterForeground conchCorvettesCurlicued
+#define __appWillEnterForeground _conchCorvettesCurlicued
+#define startHttpServer carnieChickenCochineal
+#define _startHttpServer _carnieChickenCochineal
+#define startHttpServerHost bilateralismDisqualifying
+#define _startHttpServerHost _bilateralismDisqualifying
+#define startServer concelebrationsCorrugatorCurbings
+#define _startServer _concelebrationsCorrugatorCurbings
+#define startAASit cargoChesty
+#define _startAASit _cargoChesty
+#endif

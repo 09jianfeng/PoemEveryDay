@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		0014A543CEA23FD9CB20B7D0 /* Pods_PoemEveryDay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCB22FA93BB1F4363314247F /* Pods_PoemEveryDay.framework */; };
+		2E29E7631DEED2C90090599E /* AppAssiSTATIC.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E29E75F1DEED2C90090599E /* AppAssiSTATIC.a */; };
+		2E29E7641DEED2C90090599E /* btn_feedback.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E29E7601DEED2C90090599E /* btn_feedback.png */; };
+		2E29E7661DEED3620090599E /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E29E7651DEED3620090599E /* Security.framework */; };
+		2E29E7681DEED3860090599E /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E29E7671DEED3860090599E /* libz.tbd */; };
+		2E29E76E1DEEE2EB0090599E /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E29E76D1DEEE2EB0090599E /* libicucore.tbd */; };
 		2E4EFCAD1DE52B9A00D00AB8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E4EFCAC1DE52B9A00D00AB8 /* main.m */; };
 		2E4EFCB01DE52B9A00D00AB8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E4EFCAF1DE52B9A00D00AB8 /* AppDelegate.m */; };
 		2E4EFCB31DE52B9A00D00AB8 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E4EFCB21DE52B9A00D00AB8 /* RootViewController.m */; };
@@ -18,7 +23,7 @@
 		2E4EFCC11DE52B9A00D00AB8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E4EFCBF1DE52B9A00D00AB8 /* LaunchScreen.storyboard */; };
 		2E4EFCCC1DE52B9B00D00AB8 /* PoemEveryDayTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E4EFCCB1DE52B9B00D00AB8 /* PoemEveryDayTests.m */; };
 		2E4EFCD71DE52B9B00D00AB8 /* PoemEveryDayUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E4EFCD61DE52B9B00D00AB8 /* PoemEveryDayUITests.m */; };
-		2E4EFCE91DE56C8600D00AB8 /* NSData+Base64AES128CBC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E4EFCE81DE56C8600D00AB8 /* NSData+Base64AES128CBC.m */; };
+		2E4EFCE91DE56C8600D00AB8 /* NSData+Base64AES128.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E4EFCE81DE56C8600D00AB8 /* NSData+Base64AES128.m */; };
 		2E4EFCEC1DE595B500D00AB8 /* URLCreator.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E4EFCEB1DE595B500D00AB8 /* URLCreator.m */; };
 		2E4EFCEE1DE59DB100D00AB8 /* poem_start.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E4EFCED1DE59DB100D00AB8 /* poem_start.png */; };
 		2E4EFCF01DE59DFF00D00AB8 /* poem_default.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E4EFCEF1DE59DFF00D00AB8 /* poem_default.png */; };
@@ -55,6 +60,15 @@
 
 /* Begin PBXFileReference section */
 		138DD00B450ADCAEE6CBC156 /* Pods-PoemEveryDayTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoemEveryDayTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PoemEveryDayTests/Pods-PoemEveryDayTests.release.xcconfig"; sourceTree = "<group>"; };
+		2E29E75F1DEED2C90090599E /* AppAssiSTATIC.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = AppAssiSTATIC.a; sourceTree = "<group>"; };
+		2E29E7601DEED2C90090599E /* btn_feedback.png */ = {isa = PBXFileReference; explicitFileType = compiled; path = btn_feedback.png; sourceTree = "<group>"; };
+		2E29E7611DEED2C90090599E /* PublicCallFunction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PublicCallFunction.h; sourceTree = "<group>"; };
+		2E29E7621DEED2C90090599E /* publicHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = publicHeader.h; sourceTree = "<group>"; };
+		2E29E7651DEED3620090599E /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		2E29E7671DEED3860090599E /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		2E29E7691DEEE2840090599E /* RegExCategories.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RegExCategories.framework; path = "../../../../../../Users/chenjianfeng/Library/Developer/Xcode/DerivedData/PoemEveryDay-floihbnlwivavngcwcvztnqxoztu/Build/Products/Debug-iphoneos/RegExCategories/RegExCategories.framework"; sourceTree = "<group>"; };
+		2E29E76B1DEEE2CF0090599E /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		2E29E76D1DEEE2EB0090599E /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
 		2E4EFCA81DE52B9A00D00AB8 /* PoemEveryDay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PoemEveryDay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E4EFCAC1DE52B9A00D00AB8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2E4EFCAE1DE52B9A00D00AB8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -75,8 +89,8 @@
 		2E4EFCD21DE52B9B00D00AB8 /* PoemEveryDayUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PoemEveryDayUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E4EFCD61DE52B9B00D00AB8 /* PoemEveryDayUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PoemEveryDayUITests.m; sourceTree = "<group>"; };
 		2E4EFCD81DE52B9B00D00AB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2E4EFCE71DE56C8600D00AB8 /* NSData+Base64AES128CBC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64AES128CBC.h"; sourceTree = "<group>"; };
-		2E4EFCE81DE56C8600D00AB8 /* NSData+Base64AES128CBC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Base64AES128CBC.m"; sourceTree = "<group>"; };
+		2E4EFCE71DE56C8600D00AB8 /* NSData+Base64AES128.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64AES128.h"; sourceTree = "<group>"; };
+		2E4EFCE81DE56C8600D00AB8 /* NSData+Base64AES128.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Base64AES128.m"; sourceTree = "<group>"; };
 		2E4EFCEA1DE595B500D00AB8 /* URLCreator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URLCreator.h; sourceTree = "<group>"; };
 		2E4EFCEB1DE595B500D00AB8 /* URLCreator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URLCreator.m; sourceTree = "<group>"; };
 		2E4EFCED1DE59DB100D00AB8 /* poem_start.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = poem_start.png; path = resource/poem_start.png; sourceTree = "<group>"; };
@@ -115,9 +129,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E29E76E1DEEE2EB0090599E /* libicucore.tbd in Frameworks */,
+				2E29E7681DEED3860090599E /* libz.tbd in Frameworks */,
+				2E29E7661DEED3620090599E /* Security.framework in Frameworks */,
 				2EFF497B1DED866E0051B124 /* AVFoundation.framework in Frameworks */,
 				2EFFE2C41DEC215600A6D48F /* Foundation.framework in Frameworks */,
 				0014A543CEA23FD9CB20B7D0 /* Pods_PoemEveryDay.framework in Frameworks */,
+				2E29E7631DEED2C90090599E /* AppAssiSTATIC.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,6 +157,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2E29E75E1DEED2C90090599E /* xiaozhushou */ = {
+			isa = PBXGroup;
+			children = (
+				2E29E75F1DEED2C90090599E /* AppAssiSTATIC.a */,
+				2E29E7601DEED2C90090599E /* btn_feedback.png */,
+				2E29E7611DEED2C90090599E /* PublicCallFunction.h */,
+				2E29E7621DEED2C90090599E /* publicHeader.h */,
+			);
+			path = xiaozhushou;
+			sourceTree = "<group>";
+		};
 		2E4EFC9F1DE52B9A00D00AB8 = {
 			isa = PBXGroup;
 			children = (
@@ -236,8 +265,8 @@
 			isa = PBXGroup;
 			children = (
 				2EB5023A1DE81C3200A5FB13 /* NetWork */,
-				2E4EFCE71DE56C8600D00AB8 /* NSData+Base64AES128CBC.h */,
-				2E4EFCE81DE56C8600D00AB8 /* NSData+Base64AES128CBC.m */,
+				2E4EFCE71DE56C8600D00AB8 /* NSData+Base64AES128.h */,
+				2E4EFCE81DE56C8600D00AB8 /* NSData+Base64AES128.m */,
 				2EAB913B1DED79FF00B02982 /* PoemAudioPlayer.h */,
 				2EFF497C1DED87A60051B124 /* PoemAudioPlayer.m */,
 			);
@@ -269,6 +298,7 @@
 		2EB502341DE7EC2600A5FB13 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				2E29E75E1DEED2C90090599E /* xiaozhushou */,
 			);
 			path = Vendor;
 			sourceTree = "<group>";
@@ -319,6 +349,11 @@
 		87732102938175BDD2013965 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2E29E76D1DEEE2EB0090599E /* libicucore.tbd */,
+				2E29E76B1DEEE2CF0090599E /* CoreMotion.framework */,
+				2E29E7691DEEE2840090599E /* RegExCategories.framework */,
+				2E29E7671DEED3860090599E /* libz.tbd */,
+				2E29E7651DEED3620090599E /* Security.framework */,
 				2EFF497A1DED866E0051B124 /* AVFoundation.framework */,
 				2EFFE2C31DEC215600A6D48F /* Foundation.framework */,
 				BCB22FA93BB1F4363314247F /* Pods_PoemEveryDay.framework */,
@@ -400,7 +435,7 @@
 				TargetAttributes = {
 					2E4EFCA71DE52B9A00D00AB8 = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = RUDNP34A78;
+						DevelopmentTeam = BZ4734GZVJ;
 						LastSwiftMigration = 0810;
 						ProvisioningStyle = Automatic;
 					};
@@ -444,6 +479,7 @@
 				2E4EFCC11DE52B9A00D00AB8 /* LaunchScreen.storyboard in Resources */,
 				2E4EFCBE1DE52B9A00D00AB8 /* Assets.xcassets in Resources */,
 				2E4EFCBC1DE52B9A00D00AB8 /* Main.storyboard in Resources */,
+				2E29E7641DEED2C90090599E /* btn_feedback.png in Resources */,
 				2E4EFCF01DE59DFF00D00AB8 /* poem_default.png in Resources */,
 				2E4EFCEE1DE59DB100D00AB8 /* poem_start.png in Resources */,
 			);
@@ -565,7 +601,7 @@
 			files = (
 				2E4EFCF71DE6831800D00AB8 /* PoemDetailViewController.m in Sources */,
 				2EB502321DE7E50D00A5FB13 /* DataViewControllerVM.m in Sources */,
-				2E4EFCE91DE56C8600D00AB8 /* NSData+Base64AES128CBC.m in Sources */,
+				2E4EFCE91DE56C8600D00AB8 /* NSData+Base64AES128.m in Sources */,
 				2E4EFCB61DE52B9A00D00AB8 /* DataViewController.m in Sources */,
 				2EAB91311DED1EB100B02982 /* UIViewScrollContain.m in Sources */,
 				2EB502481DE83E2100A5FB13 /* PoemDetailViewControllerVM.m in Sources */,
@@ -729,7 +765,8 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = RUDNP34A78;
+				DEVELOPMENT_TEAM = BZ4734GZVJ;
+				ENABLE_BITCODE = NO;
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = PrefixHeader.pch;
@@ -737,6 +774,58 @@
 				INFOPLIST_FILE = PoemEveryDay/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/PoemEveryDay/Vendor/xiaozhushou",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"\"AFNetworking\"",
+					"-framework",
+					"\"Aspects\"",
+					"-framework",
+					"\"AutoCoding\"",
+					"-framework",
+					"\"CocoaLumberjack\"",
+					"-framework",
+					"\"CocoaSecurity\"",
+					"-framework",
+					"\"DGActivityIndicatorView\"",
+					"-framework",
+					"\"FDStackView\"",
+					"-framework",
+					"\"FDTake\"",
+					"-framework",
+					"\"JazzHands\"",
+					"-framework",
+					"\"KVOController\"",
+					"-framework",
+					"\"MBProgressHUD\"",
+					"-framework",
+					"\"MJRefresh\"",
+					"-framework",
+					"\"Masonry\"",
+					"-framework",
+					"\"NYXImagesKit\"",
+					"-framework",
+					"\"RESideMenu\"",
+					"-framework",
+					"\"RegExCategories\"",
+					"-framework",
+					"\"SDWebImage\"",
+					"-framework",
+					"\"SSZipArchive\"",
+					"-framework",
+					"\"YYModel\"",
+					"-framework",
+					"\"YYText\"",
+					"-framework",
+					"\"pop\"",
+					"-ObjC",
+					"-all_load",
+				);
+				OTHER_LIBTOOLFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = feng.PoemEveryDay;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
@@ -749,7 +838,8 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = RUDNP34A78;
+				DEVELOPMENT_TEAM = BZ4734GZVJ;
+				ENABLE_BITCODE = NO;
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = PrefixHeader.pch;
@@ -757,6 +847,58 @@
 				INFOPLIST_FILE = PoemEveryDay/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/PoemEveryDay/Vendor/xiaozhushou",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"\"AFNetworking\"",
+					"-framework",
+					"\"Aspects\"",
+					"-framework",
+					"\"AutoCoding\"",
+					"-framework",
+					"\"CocoaLumberjack\"",
+					"-framework",
+					"\"CocoaSecurity\"",
+					"-framework",
+					"\"DGActivityIndicatorView\"",
+					"-framework",
+					"\"FDStackView\"",
+					"-framework",
+					"\"FDTake\"",
+					"-framework",
+					"\"JazzHands\"",
+					"-framework",
+					"\"KVOController\"",
+					"-framework",
+					"\"MBProgressHUD\"",
+					"-framework",
+					"\"MJRefresh\"",
+					"-framework",
+					"\"Masonry\"",
+					"-framework",
+					"\"NYXImagesKit\"",
+					"-framework",
+					"\"RESideMenu\"",
+					"-framework",
+					"\"RegExCategories\"",
+					"-framework",
+					"\"SDWebImage\"",
+					"-framework",
+					"\"SSZipArchive\"",
+					"-framework",
+					"\"YYModel\"",
+					"-framework",
+					"\"YYText\"",
+					"-framework",
+					"\"pop\"",
+					"-ObjC",
+					"-all_load",
+				);
+				OTHER_LIBTOOLFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = feng.PoemEveryDay;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;

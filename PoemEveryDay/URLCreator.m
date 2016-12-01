@@ -7,7 +7,7 @@
 //
 
 #import "URLCreator.h"
-#import "NSData+Base64AES128CBC.h"
+#import "NSData+Base64AES128.h"
 
 @implementation URLCreator
 

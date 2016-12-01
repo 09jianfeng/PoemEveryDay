@@ -7,7 +7,7 @@
 //
 
 #import <XCTest/XCTest.h>
-#import "NSData+Base64AES128CBC.h"
+#import "NSData+Base64AES128.h"
 #import "WebRequest.h"
 
 #ifndef Header_h

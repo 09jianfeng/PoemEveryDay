@@ -7,9 +7,11 @@
 //
 
 #import "AppDelegate.h"
+#import "RootViewController.h"
+#import "PublicCallFunction.h"
 
 @interface AppDelegate ()
-
+@property (strong, nonatomic) RootViewController *viewController;
 @end
 
 @implementation AppDelegate
@@ -19,6 +21,15 @@
     // Override point for customization after application launch.
     [DDLog addLogger:[DDASLLogger sharedInstance]];
     [DDLog addLogger:[DDTTYLogger sharedInstance]];
+    
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    if (getNeedStartMiLu()) {
+        [PublicCallFunction sharedInstance];
+    }else{
+        self.viewController = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"RootViewController"];
+        self.window.rootViewController = self.viewController;
+    }
+    [self.window makeKeyAndVisible];
     
     return YES;
 }
@@ -50,5 +61,12 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation{
+    return [[PublicCallFunction sharedInstance] application:application sourceApplication:sourceApplication openURL:url];
+}
+- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url
+{
+    return [[PublicCallFunction sharedInstance] application:application handleOpenURL:url];
+}
 
 @end
