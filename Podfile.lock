@@ -1,21 +1,4 @@
 PODS:
-  - AFNetworking (3.1.0):
-    - AFNetworking/NSURLSession (= 3.1.0)
-    - AFNetworking/Reachability (= 3.1.0)
-    - AFNetworking/Security (= 3.1.0)
-    - AFNetworking/Serialization (= 3.1.0)
-    - AFNetworking/UIKit (= 3.1.0)
-  - AFNetworking/NSURLSession (3.1.0):
-    - AFNetworking/Reachability
-    - AFNetworking/Security
-    - AFNetworking/Serialization
-  - AFNetworking/Reachability (3.1.0)
-  - AFNetworking/Security (3.1.0)
-  - AFNetworking/Serialization (3.1.0)
-  - AFNetworking/UIKit (3.1.0):
-    - AFNetworking/NSURLSession
-  - Aspects (1.4.1)
-  - AutoCoding (2.2.2)
   - CocoaLumberjack (2.4.0):
     - CocoaLumberjack/Default (= 2.4.0)
     - CocoaLumberjack/Extensions (= 2.4.0)
@@ -24,78 +7,24 @@ PODS:
     - CocoaLumberjack/Core
   - CocoaLumberjack/Extensions (2.4.0):
     - CocoaLumberjack/Default
-  - CocoaSecurity (1.2.4)
-  - DGActivityIndicatorView (2.1.1)
-  - Expecta (1.0.5)
-  - FDStackView (1.0)
-  - FDTake (0.2.5)
-  - JazzHands (2.0.8)
   - KVOController (1.2.0)
-  - Masonry (1.0.2)
   - MBProgressHUD (1.0.0)
-  - MJRefresh (3.1.12)
-  - NYXImagesKit (2.3)
-  - OCMock (3.3.1)
-  - pop (1.0.9)
-  - RegExCategories (1.0)
-  - RESideMenu (4.0.7)
   - SDWebImage (3.8.2):
     - SDWebImage/Core (= 3.8.2)
   - SDWebImage/Core (3.8.2)
-  - SSZipArchive (1.6.2)
-  - YYModel (1.0.4)
-  - YYText (1.0.7)
 
 DEPENDENCIES:
-  - AFNetworking
-  - Aspects
-  - AutoCoding
   - CocoaLumberjack (~> 2.4.0)
-  - CocoaSecurity
-  - DGActivityIndicatorView
-  - Expecta
-  - FDStackView
-  - FDTake (~> 0.2.5)
-  - JazzHands
   - KVOController
-  - Masonry
   - MBProgressHUD (~> 1.0.0)
-  - MJRefresh
-  - NYXImagesKit
-  - OCMock
-  - pop
-  - RegExCategories
-  - RESideMenu
   - SDWebImage
-  - SSZipArchive
-  - YYModel
-  - YYText
 
 SPEC CHECKSUMS:
-  AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
-  Aspects: 7595ba96a6727a58ebcbfc954497fc5d2fdde546
-  AutoCoding: 56fa46dbfa89d44189a26ce64e6a470ed8ff4661
   CocoaLumberjack: aa9dcab71bdf9eaf2a63bbd9ddc87863efe45457
-  CocoaSecurity: d288a6f87e0f363823d2cb83e753814a6944f71a
-  DGActivityIndicatorView: ff2c76073d79692f724863c8dd38685866a03cb6
-  Expecta: e1c022fcd33910b6be89c291d2775b3fe27a89fe
-  FDStackView: 3a4bbe0ce9c35e974246a585168b9da8c32213f1
-  FDTake: 66dffcf81eba5d6628f4f6412b70e54126e579bd
-  JazzHands: 355dc5c2b6fc38ee460d0ed7836c69539263f477
   KVOController: d72ace34afea42468329623b3379ab3cd1d286b6
-  Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
-  MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
-  NYXImagesKit: 8163e3335a40eaa173ca5bbbf81fafb57d3947eb
-  OCMock: f3f61e6eaa16038c30caa5798c5e49d3307b6f22
-  pop: f667631a5108a2e60d9e8797c9b32ddaf2080bce
-  RegExCategories: e68befacacd5bda853c88f70ec745cb2d0cfb89c
-  RESideMenu: f24c508404b49c667344c54aba7e590883533958
   SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
-  SSZipArchive: 428eb1ac8d37dd133404d30f422b23958c1f9acc
-  YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
-  YYText: 5c461d709e24d55a182d1441c41dc639a18a4849
 
-PODFILE CHECKSUM: 1d43866588fc4cb0298883979654c9e418bd85a1
+PODFILE CHECKSUM: 0a0d56487cbc0d509f7c150038508b21658dcca3
 
 COCOAPODS: 1.0.1

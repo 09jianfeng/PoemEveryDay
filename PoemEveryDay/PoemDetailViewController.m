@@ -10,7 +10,6 @@
 #import "PoemDetailViewControllerVM.h"
 #import "MBProgressHUD.h"
 #import "PoemDetailDataStruc.h"
-#import "Masonry.h"
 #import "UIImageView+WebCache.h"
 #import "FBKVOController.h"
 
