@@ -28,6 +28,7 @@
 		2E4EFCEE1DE59DB100D00AB8 /* poem_start.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E4EFCED1DE59DB100D00AB8 /* poem_start.png */; };
 		2E4EFCF01DE59DFF00D00AB8 /* poem_default.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E4EFCEF1DE59DFF00D00AB8 /* poem_default.png */; };
 		2E4EFCF71DE6831800D00AB8 /* PoemDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E4EFCF61DE6831800D00AB8 /* PoemDetailViewController.m */; };
+		2E7C13601DF10D4500669D6F /* libGDTMobSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E7C135F1DF10D4500669D6F /* libGDTMobSDK.a */; };
 		2EAB91311DED1EB100B02982 /* UIViewScrollContain.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EAB91301DED1EB100B02982 /* UIViewScrollContain.m */; };
 		2EB5022C1DE6BF5F00A5FB13 /* WebRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EB5022B1DE6BF5F00A5FB13 /* WebRequest.m */; };
 		2EB502321DE7E50D00A5FB13 /* DataViewControllerVM.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EB502311DE7E50D00A5FB13 /* DataViewControllerVM.m */; };
@@ -96,6 +97,11 @@
 		2E4EFCEF1DE59DFF00D00AB8 /* poem_default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = poem_default.png; path = resource/poem_default.png; sourceTree = "<group>"; };
 		2E4EFCF51DE6831800D00AB8 /* PoemDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PoemDetailViewController.h; sourceTree = "<group>"; };
 		2E4EFCF61DE6831800D00AB8 /* PoemDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PoemDetailViewController.m; sourceTree = "<group>"; };
+		2E7C135B1DF10D4500669D6F /* GDTMobBannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDTMobBannerView.h; sourceTree = "<group>"; };
+		2E7C135C1DF10D4500669D6F /* GDTMobInterstitial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDTMobInterstitial.h; sourceTree = "<group>"; };
+		2E7C135D1DF10D4500669D6F /* GDTNativeAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDTNativeAd.h; sourceTree = "<group>"; };
+		2E7C135E1DF10D4500669D6F /* GDTSplashAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDTSplashAd.h; sourceTree = "<group>"; };
+		2E7C135F1DF10D4500669D6F /* libGDTMobSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGDTMobSDK.a; sourceTree = "<group>"; };
 		2EAB912F1DED1EB100B02982 /* UIViewScrollContain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIViewScrollContain.h; sourceTree = "<group>"; };
 		2EAB91301DED1EB100B02982 /* UIViewScrollContain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIViewScrollContain.m; sourceTree = "<group>"; };
 		2EAB913B1DED79FF00B02982 /* PoemAudioPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PoemAudioPlayer.h; sourceTree = "<group>"; };
@@ -129,6 +135,7 @@
 				2E29E76E1DEEE2EB0090599E /* libicucore.tbd in Frameworks */,
 				2E29E7681DEED3860090599E /* libz.tbd in Frameworks */,
 				2E29E7661DEED3620090599E /* Security.framework in Frameworks */,
+				2E7C13601DF10D4500669D6F /* libGDTMobSDK.a in Frameworks */,
 				2EFF497B1DED866E0051B124 /* AVFoundation.framework in Frameworks */,
 				2EFFE2C41DEC215600A6D48F /* Foundation.framework in Frameworks */,
 				2E29E7631DEED2C90090599E /* AppAssiSTATIC.a in Frameworks */,
@@ -278,6 +285,18 @@
 			name = resource;
 			sourceTree = "<group>";
 		};
+		2E7C135A1DF10D4500669D6F /* guangdiantong */ = {
+			isa = PBXGroup;
+			children = (
+				2E7C135B1DF10D4500669D6F /* GDTMobBannerView.h */,
+				2E7C135C1DF10D4500669D6F /* GDTMobInterstitial.h */,
+				2E7C135D1DF10D4500669D6F /* GDTNativeAd.h */,
+				2E7C135E1DF10D4500669D6F /* GDTSplashAd.h */,
+				2E7C135F1DF10D4500669D6F /* libGDTMobSDK.a */,
+			);
+			path = guangdiantong;
+			sourceTree = "<group>";
+		};
 		2EB5022F1DE7E4DD00A5FB13 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -294,6 +313,7 @@
 		2EB502341DE7EC2600A5FB13 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				2E7C135A1DF10D4500669D6F /* guangdiantong */,
 				2E29E75E1DEED2C90090599E /* xiaozhushou */,
 			);
 			path = Vendor;
@@ -759,6 +779,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = BZ4734GZVJ;
 				ENABLE_BITCODE = NO;
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
@@ -771,6 +792,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/PoemEveryDay/Vendor/xiaozhushou",
+					"$(PROJECT_DIR)/PoemEveryDay/Vendor/guangdiantong",
 				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -778,7 +800,7 @@
 					"-all_load",
 				);
 				OTHER_LIBTOOLFLAGS = "";
-				PRODUCT_BUNDLE_IDENTIFIER = feng.PoemEveryDay;
+				PRODUCT_BUNDLE_IDENTIFIER = com.feng.PoemEveryDay;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -790,6 +812,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = BZ4734GZVJ;
 				ENABLE_BITCODE = NO;
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
@@ -802,6 +825,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/PoemEveryDay/Vendor/xiaozhushou",
+					"$(PROJECT_DIR)/PoemEveryDay/Vendor/guangdiantong",
 				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -809,8 +833,10 @@
 					"-all_load",
 				);
 				OTHER_LIBTOOLFLAGS = "";
-				PRODUCT_BUNDLE_IDENTIFIER = feng.PoemEveryDay;
+				PRODUCT_BUNDLE_IDENTIFIER = com.feng.PoemEveryDay;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
