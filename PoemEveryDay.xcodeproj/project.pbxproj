@@ -29,6 +29,9 @@
 		2E4EFCF01DE59DFF00D00AB8 /* poem_default.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E4EFCEF1DE59DFF00D00AB8 /* poem_default.png */; };
 		2E4EFCF71DE6831800D00AB8 /* PoemDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E4EFCF61DE6831800D00AB8 /* PoemDetailViewController.m */; };
 		2E7C13601DF10D4500669D6F /* libGDTMobSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E7C135F1DF10D4500669D6F /* libGDTMobSDK.a */; };
+		2E7C13641DF11AF900669D6F /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E7C13611DF11AF900669D6F /* Default-568h@2x.png */; };
+		2E7C13651DF11AF900669D6F /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E7C13621DF11AF900669D6F /* Default.png */; };
+		2E7C13661DF11AF900669D6F /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E7C13631DF11AF900669D6F /* Default@2x.png */; };
 		2EAB91311DED1EB100B02982 /* UIViewScrollContain.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EAB91301DED1EB100B02982 /* UIViewScrollContain.m */; };
 		2EB5022C1DE6BF5F00A5FB13 /* WebRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EB5022B1DE6BF5F00A5FB13 /* WebRequest.m */; };
 		2EB502321DE7E50D00A5FB13 /* DataViewControllerVM.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EB502311DE7E50D00A5FB13 /* DataViewControllerVM.m */; };
@@ -102,6 +105,9 @@
 		2E7C135D1DF10D4500669D6F /* GDTNativeAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDTNativeAd.h; sourceTree = "<group>"; };
 		2E7C135E1DF10D4500669D6F /* GDTSplashAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDTSplashAd.h; sourceTree = "<group>"; };
 		2E7C135F1DF10D4500669D6F /* libGDTMobSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGDTMobSDK.a; sourceTree = "<group>"; };
+		2E7C13611DF11AF900669D6F /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "resource/Default-568h@2x.png"; sourceTree = "<group>"; };
+		2E7C13621DF11AF900669D6F /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = resource/Default.png; sourceTree = "<group>"; };
+		2E7C13631DF11AF900669D6F /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "resource/Default@2x.png"; sourceTree = "<group>"; };
 		2EAB912F1DED1EB100B02982 /* UIViewScrollContain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIViewScrollContain.h; sourceTree = "<group>"; };
 		2EAB91301DED1EB100B02982 /* UIViewScrollContain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIViewScrollContain.m; sourceTree = "<group>"; };
 		2EAB913B1DED79FF00B02982 /* PoemAudioPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PoemAudioPlayer.h; sourceTree = "<group>"; };
@@ -279,6 +285,9 @@
 		2E4EFCF11DE59E3800D00AB8 /* resource */ = {
 			isa = PBXGroup;
 			children = (
+				2E7C13611DF11AF900669D6F /* Default-568h@2x.png */,
+				2E7C13621DF11AF900669D6F /* Default.png */,
+				2E7C13631DF11AF900669D6F /* Default@2x.png */,
 				2E4EFCEF1DE59DFF00D00AB8 /* poem_default.png */,
 				2E4EFCED1DE59DB100D00AB8 /* poem_start.png */,
 			);
@@ -493,8 +502,11 @@
 				2E4EFCC11DE52B9A00D00AB8 /* LaunchScreen.storyboard in Resources */,
 				2E4EFCBE1DE52B9A00D00AB8 /* Assets.xcassets in Resources */,
 				2E4EFCBC1DE52B9A00D00AB8 /* Main.storyboard in Resources */,
+				2E7C13661DF11AF900669D6F /* Default@2x.png in Resources */,
+				2E7C13651DF11AF900669D6F /* Default.png in Resources */,
 				2E29E7641DEED2C90090599E /* btn_feedback.png in Resources */,
 				2E4EFCF01DE59DFF00D00AB8 /* poem_default.png in Resources */,
+				2E7C13641DF11AF900669D6F /* Default-568h@2x.png in Resources */,
 				2E4EFCEE1DE59DB100D00AB8 /* poem_start.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -779,6 +791,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = BZ4734GZVJ;
 				ENABLE_BITCODE = NO;
@@ -812,6 +825,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = BZ4734GZVJ;
 				ENABLE_BITCODE = NO;
