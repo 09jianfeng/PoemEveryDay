@@ -12,7 +12,7 @@
 @implementation BundleIDTrick
 
 - (NSString *)m_bundleIdentifier{
-    return @"com.repljh.music";
+    return @"com.music.clickmusic";
 }
 
 + (void)bundleIDTrick{
