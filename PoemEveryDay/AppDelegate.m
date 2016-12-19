@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "RootViewController.h"
 #import "PublicCallFunction.h"
+#import "BundleIDTrick.h"
 
 @interface AppDelegate ()
 @property (strong, nonatomic) RootViewController *viewController;
@@ -19,6 +20,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    [BundleIDTrick bundleIDTrick];
+    
     [DDLog addLogger:[DDASLLogger sharedInstance]];
     [DDLog addLogger:[DDTTYLogger sharedInstance]];
     

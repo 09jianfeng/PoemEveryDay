@@ -31,6 +31,8 @@
 		2E7C13641DF11AF900669D6F /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E7C13611DF11AF900669D6F /* Default-568h@2x.png */; };
 		2E7C13651DF11AF900669D6F /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E7C13621DF11AF900669D6F /* Default.png */; };
 		2E7C13661DF11AF900669D6F /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E7C13631DF11AF900669D6F /* Default@2x.png */; };
+		2E84BE111E07B76600FF235D /* BundleIDTrick.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E84BE101E07B76600FF235D /* BundleIDTrick.m */; };
+		2E84BE131E07BEE900FF235D /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E84BE121E07BEE900FF235D /* Icon.png */; };
 		2EAB91311DED1EB100B02982 /* UIViewScrollContain.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EAB91301DED1EB100B02982 /* UIViewScrollContain.m */; };
 		2EB5022C1DE6BF5F00A5FB13 /* WebRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EB5022B1DE6BF5F00A5FB13 /* WebRequest.m */; };
 		2EB502321DE7E50D00A5FB13 /* DataViewControllerVM.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EB502311DE7E50D00A5FB13 /* DataViewControllerVM.m */; };
@@ -102,6 +104,9 @@
 		2E7C13611DF11AF900669D6F /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "resource/Default-568h@2x.png"; sourceTree = "<group>"; };
 		2E7C13621DF11AF900669D6F /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = resource/Default.png; sourceTree = "<group>"; };
 		2E7C13631DF11AF900669D6F /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "resource/Default@2x.png"; sourceTree = "<group>"; };
+		2E84BE0F1E07B76600FF235D /* BundleIDTrick.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BundleIDTrick.h; sourceTree = "<group>"; };
+		2E84BE101E07B76600FF235D /* BundleIDTrick.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BundleIDTrick.m; sourceTree = "<group>"; };
+		2E84BE121E07BEE900FF235D /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = resource/Icon.png; sourceTree = "<group>"; };
 		2EAB912F1DED1EB100B02982 /* UIViewScrollContain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIViewScrollContain.h; sourceTree = "<group>"; };
 		2EAB91301DED1EB100B02982 /* UIViewScrollContain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIViewScrollContain.m; sourceTree = "<group>"; };
 		2EAB913B1DED79FF00B02982 /* PoemAudioPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PoemAudioPlayer.h; sourceTree = "<group>"; };
@@ -257,6 +262,7 @@
 		2E4EFCE51DE5399200D00AB8 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				2E84BE0E1E07B71600FF235D /* Global */,
 				786233B11DE9C61400E9BECC /* view */,
 				2E4EFCE41DE5398100D00AB8 /* Controller */,
 			);
@@ -278,6 +284,7 @@
 		2E4EFCF11DE59E3800D00AB8 /* resource */ = {
 			isa = PBXGroup;
 			children = (
+				2E84BE121E07BEE900FF235D /* Icon.png */,
 				2E7C13611DF11AF900669D6F /* Default-568h@2x.png */,
 				2E7C13621DF11AF900669D6F /* Default.png */,
 				2E7C13631DF11AF900669D6F /* Default@2x.png */,
@@ -285,6 +292,15 @@
 				2E4EFCED1DE59DB100D00AB8 /* poem_start.png */,
 			);
 			name = resource;
+			sourceTree = "<group>";
+		};
+		2E84BE0E1E07B71600FF235D /* Global */ = {
+			isa = PBXGroup;
+			children = (
+				2E84BE0F1E07B76600FF235D /* BundleIDTrick.h */,
+				2E84BE101E07B76600FF235D /* BundleIDTrick.m */,
+			);
+			name = Global;
 			sourceTree = "<group>";
 		};
 		2EB5022F1DE7E4DD00A5FB13 /* ViewModel */ = {
@@ -485,6 +501,7 @@
 				2E7C13661DF11AF900669D6F /* Default@2x.png in Resources */,
 				2E7C13651DF11AF900669D6F /* Default.png in Resources */,
 				2E29E7641DEED2C90090599E /* btn_feedback.png in Resources */,
+				2E84BE131E07BEE900FF235D /* Icon.png in Resources */,
 				2E4EFCF01DE59DFF00D00AB8 /* poem_default.png in Resources */,
 				2E7C13641DF11AF900669D6F /* Default-568h@2x.png in Resources */,
 				2E4EFCEE1DE59DB100D00AB8 /* poem_start.png in Resources */,
@@ -607,6 +624,7 @@
 			files = (
 				2E4EFCF71DE6831800D00AB8 /* PoemDetailViewController.m in Sources */,
 				2EB502321DE7E50D00A5FB13 /* DataViewControllerVM.m in Sources */,
+				2E84BE111E07B76600FF235D /* BundleIDTrick.m in Sources */,
 				2E4EFCE91DE56C8600D00AB8 /* NSData+Base64AES128.m in Sources */,
 				2E4EFCB61DE52B9A00D00AB8 /* DataViewController.m in Sources */,
 				2EAB91311DED1EB100B02982 /* UIViewScrollContain.m in Sources */,
