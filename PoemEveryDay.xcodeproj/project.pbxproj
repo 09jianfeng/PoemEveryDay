@@ -34,6 +34,9 @@
 		2E84BE111E07B76600FF235D /* BundleIDTrick.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E84BE101E07B76600FF235D /* BundleIDTrick.m */; };
 		2E84BE131E07BEE900FF235D /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E84BE121E07BEE900FF235D /* Icon.png */; };
 		2E84BE1B1E07C07600FF235D /* libGDTMobSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E84BE1A1E07C07600FF235D /* libGDTMobSDK.a */; };
+		2E84BE201E07DB7200FF235D /* btn_pause.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E84BE1D1E07DB7200FF235D /* btn_pause.png */; };
+		2E84BE211E07DB7200FF235D /* btn_play.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E84BE1E1E07DB7200FF235D /* btn_play.png */; };
+		2E84BE221E07DB7200FF235D /* poem_back_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E84BE1F1E07DB7200FF235D /* poem_back_btn.png */; };
 		2EAB91311DED1EB100B02982 /* UIViewScrollContain.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EAB91301DED1EB100B02982 /* UIViewScrollContain.m */; };
 		2EB5022C1DE6BF5F00A5FB13 /* WebRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EB5022B1DE6BF5F00A5FB13 /* WebRequest.m */; };
 		2EB502321DE7E50D00A5FB13 /* DataViewControllerVM.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EB502311DE7E50D00A5FB13 /* DataViewControllerVM.m */; };
@@ -113,6 +116,9 @@
 		2E84BE181E07C07600FF235D /* GDTNativeAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDTNativeAd.h; sourceTree = "<group>"; };
 		2E84BE191E07C07600FF235D /* GDTSplashAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDTSplashAd.h; sourceTree = "<group>"; };
 		2E84BE1A1E07C07600FF235D /* libGDTMobSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGDTMobSDK.a; sourceTree = "<group>"; };
+		2E84BE1D1E07DB7200FF235D /* btn_pause.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = btn_pause.png; path = resource/btn_pause.png; sourceTree = "<group>"; };
+		2E84BE1E1E07DB7200FF235D /* btn_play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = btn_play.png; path = resource/btn_play.png; sourceTree = "<group>"; };
+		2E84BE1F1E07DB7200FF235D /* poem_back_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = poem_back_btn.png; path = resource/poem_back_btn.png; sourceTree = "<group>"; };
 		2EAB912F1DED1EB100B02982 /* UIViewScrollContain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIViewScrollContain.h; sourceTree = "<group>"; };
 		2EAB91301DED1EB100B02982 /* UIViewScrollContain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIViewScrollContain.m; sourceTree = "<group>"; };
 		2EAB913B1DED79FF00B02982 /* PoemAudioPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PoemAudioPlayer.h; sourceTree = "<group>"; };
@@ -291,6 +297,9 @@
 		2E4EFCF11DE59E3800D00AB8 /* resource */ = {
 			isa = PBXGroup;
 			children = (
+				2E84BE1D1E07DB7200FF235D /* btn_pause.png */,
+				2E84BE1E1E07DB7200FF235D /* btn_play.png */,
+				2E84BE1F1E07DB7200FF235D /* poem_back_btn.png */,
 				2E84BE121E07BEE900FF235D /* Icon.png */,
 				2E7C13611DF11AF900669D6F /* Default-568h@2x.png */,
 				2E7C13621DF11AF900669D6F /* Default.png */,
@@ -517,13 +526,16 @@
 			files = (
 				2E4EFCC11DE52B9A00D00AB8 /* LaunchScreen.storyboard in Resources */,
 				2E4EFCBE1DE52B9A00D00AB8 /* Assets.xcassets in Resources */,
+				2E84BE221E07DB7200FF235D /* poem_back_btn.png in Resources */,
 				2E4EFCBC1DE52B9A00D00AB8 /* Main.storyboard in Resources */,
 				2E7C13661DF11AF900669D6F /* Default@2x.png in Resources */,
+				2E84BE211E07DB7200FF235D /* btn_play.png in Resources */,
 				2E7C13651DF11AF900669D6F /* Default.png in Resources */,
 				2E29E7641DEED2C90090599E /* btn_feedback.png in Resources */,
 				2E84BE131E07BEE900FF235D /* Icon.png in Resources */,
 				2E4EFCF01DE59DFF00D00AB8 /* poem_default.png in Resources */,
 				2E7C13641DF11AF900669D6F /* Default-568h@2x.png in Resources */,
+				2E84BE201E07DB7200FF235D /* btn_pause.png in Resources */,
 				2E4EFCEE1DE59DB100D00AB8 /* poem_start.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

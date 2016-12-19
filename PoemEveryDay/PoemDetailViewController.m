@@ -36,6 +36,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *labelProgressTime;
 @property (copy, nonatomic) NSString *totalTime;
 @property (weak, nonatomic) IBOutlet UIButton *btnPlay;
+@property (weak, nonatomic) IBOutlet UIButton *btnBack;
 
 // constrain
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *poemHeighContrain;
@@ -64,6 +65,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    [_btnPlay setImage:[UIImage imageNamed:@"btn_play"] forState:UIControlStateNormal];
+    [_btnBack setImage:[UIImage imageNamed:@"poem_back_btn"] forState:UIControlStateNormal];
 }
 
 - (void)viewWillAppear:(BOOL)animated{
