@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="703-4V-yAM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="703-4V-yAM">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -270,7 +270,7 @@
                                                     <constraint firstAttribute="height" constant="50" id="U6W-9B-Z61"/>
                                                     <constraint firstAttribute="width" constant="50" id="jGN-lo-LeZ"/>
                                                 </constraints>
-                                                <state key="normal" title="返回" image="poem_back_btn"/>
+                                                <state key="normal" title="返回" image="poem_back_btn" backgroundImage="poem_back_btn"/>
                                                 <connections>
                                                     <action selector="btnBackPressed:" destination="PPU-k1-bfi" eventType="touchUpInside" id="NrN-3w-qwv"/>
                                                 </connections>
@@ -415,7 +415,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="btn_play" width="66" height="66"/>
+        <image name="btn_play" width="33" height="33"/>
         <image name="poem_back_btn" width="50" height="50"/>
         <image name="poem_default.png" width="513" height="466"/>
         <image name="poem_start.png" width="750" height="1334"/>

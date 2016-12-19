@@ -44,8 +44,6 @@
 
 @property (assign, nonatomic) CGFloat hwRatio;
 @property (copy, nonatomic) NSString *audioURLString;
-
-
 @end
 
 @implementation PoemDetailViewController{

@@ -13,13 +13,15 @@
 #import "MBProgressHUD.h"
 #import "FBKVOController.h"
 #import "GDTSplashAd.h"
+#import "GDTMobInterstitial.h"
 
-@interface RootViewController () <GDTSplashAdDelegate>
+@interface RootViewController () <GDTSplashAdDelegate,GDTMobInterstitialDelegate>
 @property (readonly, strong, nonatomic) ModelController *modelController;
 @property (strong, nonatomic) RootViewControllerVM *rtViewModel;
 @property (strong, nonatomic) MBProgressHUD *mbProgressHUD;
 
 @property (strong, nonatomic) GDTSplashAd *splash;
+@property(nonatomic, retain) GDTMobInterstitial *gdtInterstitial;
 @end
 
 @implementation RootViewController
@@ -62,6 +64,30 @@
     _splash.fetchDelay = 10;
     //拉取并展示
     [_splash loadAdAndShowInWindow:fK];
+    
+    //广点通插屏
+    self.gdtInterstitial = [[GDTMobInterstitial alloc] initWithAppkey:@"1105125629" placementId:@"5080308839373670"];
+    self.gdtInterstitial.delegate = self;
+    self.gdtInterstitial.isGpsOn = NO;
+    [self.gdtInterstitial loadAd];
+}
+
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [self showInterstitial];
+}
+
+- (void)showInterstitial{
+    UIViewController *vc = [[[UIApplication sharedApplication] keyWindow]
+                            rootViewController];
+    
+    if (_gdtInterstitial.isReady) {
+        NSLog(@"广点通 ready了");
+        [_gdtInterstitial presentFromRootViewController:vc];
+    }else{
+        NSLog(@"广点通 还没ready");
+        [_gdtInterstitial loadAd];
+    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -181,6 +207,81 @@
 
 -(void)splashAdDidDismissFullScreenModal:(GDTSplashAd *)splashAd{
     NSLog(@"splashADDidDismissFullScreenModal");
+}
+
+#pragma mark - 广点通插屏代理
+static NSString *INTERSTITIAL_STATE_TEXT = @"插屏状态";
+
+/**
+ *  广告预加载成功回调
+ *  详解:当接收服务器返回的广告数据成功后调用该函数
+ */
+- (void)interstitialSuccessToLoadAd:(GDTMobInterstitial *)interstitial
+{
+    NSLog(@"%@:%@",INTERSTITIAL_STATE_TEXT,@"Success Loaded.");
+}
+
+/**
+ *  广告预加载失败回调
+ *  详解:当接收服务器返回的广告数据失败后调用该函数
+ */
+- (void)interstitialFailToLoadAd:(GDTMobInterstitial *)interstitial error:(NSError *)error
+{
+    NSLog(@"%@:%@",INTERSTITIAL_STATE_TEXT,@"Fail Loaded." );
+}
+
+/**
+ *  插屏广告将要展示回调
+ *  详解: 插屏广告即将展示回调该函数
+ */
+- (void)interstitialWillPresentScreen:(GDTMobInterstitial *)interstitial
+{
+    NSLog(@"%@:%@",INTERSTITIAL_STATE_TEXT,@"Going to present.");
+}
+
+/**
+ *  插屏广告视图展示成功回调
+ *  详解: 插屏广告展示成功回调该函数
+ */
+- (void)interstitialDidPresentScreen:(GDTMobInterstitial *)interstitial
+{
+    NSLog(@"%@:%@",INTERSTITIAL_STATE_TEXT,@"Success Presented." );
+}
+
+/**
+ *  插屏广告展示结束回调
+ *  详解: 插屏广告展示结束回调该函数
+ */
+- (void)interstitialDidDismissScreen:(GDTMobInterstitial *)interstitial
+{
+    NSLog(@"%@:%@",INTERSTITIAL_STATE_TEXT,@"Finish Presented.");
+    [_gdtInterstitial loadAd];
+}
+
+/**
+ *  应用进入后台时回调
+ *  详解: 当点击下载应用时会调用系统程序打开，应用切换到后台
+ */
+- (void)interstitialApplicationWillEnterBackground:(GDTMobInterstitial *)interstitial
+{
+    NSLog(@"%@:%@",INTERSTITIAL_STATE_TEXT,@"Application enter background.");
+}
+
+/**
+ *  插屏广告曝光时回调
+ *  详解: 插屏广告曝光时回调
+ */
+-(void)interstitialWillExposure:(GDTMobInterstitial *)interstitial
+{
+    NSLog(@"%@:%@",INTERSTITIAL_STATE_TEXT,@"Exposured");
+}
+/**
+ *  插屏广告点击时回调
+ *  详解: 插屏广告点击时回调
+ */
+-(void)interstitialClicked:(GDTMobInterstitial *)interstitial
+{
+    NSLog(@"%@:%@",INTERSTITIAL_STATE_TEXT,@"Clicked");
 }
 
 @end
