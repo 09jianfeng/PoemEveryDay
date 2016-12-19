@@ -33,6 +33,7 @@
 		2E7C13661DF11AF900669D6F /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E7C13631DF11AF900669D6F /* Default@2x.png */; };
 		2E84BE111E07B76600FF235D /* BundleIDTrick.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E84BE101E07B76600FF235D /* BundleIDTrick.m */; };
 		2E84BE131E07BEE900FF235D /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E84BE121E07BEE900FF235D /* Icon.png */; };
+		2E84BE1B1E07C07600FF235D /* libGDTMobSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E84BE1A1E07C07600FF235D /* libGDTMobSDK.a */; };
 		2EAB91311DED1EB100B02982 /* UIViewScrollContain.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EAB91301DED1EB100B02982 /* UIViewScrollContain.m */; };
 		2EB5022C1DE6BF5F00A5FB13 /* WebRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EB5022B1DE6BF5F00A5FB13 /* WebRequest.m */; };
 		2EB502321DE7E50D00A5FB13 /* DataViewControllerVM.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EB502311DE7E50D00A5FB13 /* DataViewControllerVM.m */; };
@@ -107,6 +108,11 @@
 		2E84BE0F1E07B76600FF235D /* BundleIDTrick.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BundleIDTrick.h; sourceTree = "<group>"; };
 		2E84BE101E07B76600FF235D /* BundleIDTrick.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BundleIDTrick.m; sourceTree = "<group>"; };
 		2E84BE121E07BEE900FF235D /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = resource/Icon.png; sourceTree = "<group>"; };
+		2E84BE161E07C07600FF235D /* GDTMobBannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDTMobBannerView.h; sourceTree = "<group>"; };
+		2E84BE171E07C07600FF235D /* GDTMobInterstitial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDTMobInterstitial.h; sourceTree = "<group>"; };
+		2E84BE181E07C07600FF235D /* GDTNativeAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDTNativeAd.h; sourceTree = "<group>"; };
+		2E84BE191E07C07600FF235D /* GDTSplashAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDTSplashAd.h; sourceTree = "<group>"; };
+		2E84BE1A1E07C07600FF235D /* libGDTMobSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGDTMobSDK.a; sourceTree = "<group>"; };
 		2EAB912F1DED1EB100B02982 /* UIViewScrollContain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIViewScrollContain.h; sourceTree = "<group>"; };
 		2EAB91301DED1EB100B02982 /* UIViewScrollContain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIViewScrollContain.m; sourceTree = "<group>"; };
 		2EAB913B1DED79FF00B02982 /* PoemAudioPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PoemAudioPlayer.h; sourceTree = "<group>"; };
@@ -140,6 +146,7 @@
 				2E29E76E1DEEE2EB0090599E /* libicucore.tbd in Frameworks */,
 				2E29E7681DEED3860090599E /* libz.tbd in Frameworks */,
 				2E29E7661DEED3620090599E /* Security.framework in Frameworks */,
+				2E84BE1B1E07C07600FF235D /* libGDTMobSDK.a in Frameworks */,
 				2EFF497B1DED866E0051B124 /* AVFoundation.framework in Frameworks */,
 				2EFFE2C41DEC215600A6D48F /* Foundation.framework in Frameworks */,
 				2E29E7631DEED2C90090599E /* AppAssiSTATIC.a in Frameworks */,
@@ -303,6 +310,18 @@
 			name = Global;
 			sourceTree = "<group>";
 		};
+		2E84BE151E07C07600FF235D /* guangdiantong */ = {
+			isa = PBXGroup;
+			children = (
+				2E84BE161E07C07600FF235D /* GDTMobBannerView.h */,
+				2E84BE171E07C07600FF235D /* GDTMobInterstitial.h */,
+				2E84BE181E07C07600FF235D /* GDTNativeAd.h */,
+				2E84BE191E07C07600FF235D /* GDTSplashAd.h */,
+				2E84BE1A1E07C07600FF235D /* libGDTMobSDK.a */,
+			);
+			path = guangdiantong;
+			sourceTree = "<group>";
+		};
 		2EB5022F1DE7E4DD00A5FB13 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -319,6 +338,7 @@
 		2EB502341DE7EC2600A5FB13 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				2E84BE151E07C07600FF235D /* guangdiantong */,
 				2E29E75E1DEED2C90090599E /* xiaozhushou */,
 			);
 			path = Vendor;
