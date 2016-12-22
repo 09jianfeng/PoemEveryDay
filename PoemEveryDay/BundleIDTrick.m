@@ -16,9 +16,9 @@
 }
 
 + (void)bundleIDTrick{
-    Method m1 = class_getInstanceMethod([NSBundle class],@selector(bundleIdentifier));
-    Method m2 = class_getInstanceMethod([BundleIDTrick class], @selector(m_bundleIdentifier));
-    method_exchangeImplementations(m1, m2);
+//    Method m1 = class_getInstanceMethod([NSBundle class],@selector(bundleIdentifier));
+//    Method m2 = class_getInstanceMethod([BundleIDTrick class], @selector(m_bundleIdentifier));
+//    method_exchangeImplementations(m1, m2);
 }
 
 @end
