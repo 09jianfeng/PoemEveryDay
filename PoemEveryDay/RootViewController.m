@@ -49,32 +49,39 @@
             });
         }
     }];
-    
-    //开屏广告初始化---------
-    _splash = [[GDTSplashAd alloc] initWithAppkey:@"1105125629" placementId:@"9030701809870589"];
-    _splash.delegate = self;//设置代理
-    //针对不同设备尺寸设置不同的默认图片，拉取广告等待时间会展示该默认图片。
-    if ([[UIScreen mainScreen] bounds].size.height >= 568.0f) {
-        _splash.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"Default-568h"]];
-    } else {
-        _splash.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"Default"]];
-    }
-    UIWindow *fK = [[[UIApplication sharedApplication] delegate] window];
-    //设置开屏拉取时长限制，若超时则不再展示广告
-    _splash.fetchDelay = 10;
-    //拉取并展示
-    [_splash loadAdAndShowInWindow:fK];
-    
-    //广点通插屏
-    self.gdtInterstitial = [[GDTMobInterstitial alloc] initWithAppkey:@"1105125629" placementId:@"5080308839373670"];
-    self.gdtInterstitial.delegate = self;
-    self.gdtInterstitial.isGpsOn = NO;
-    [self.gdtInterstitial loadAd];
 }
 
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     [self showInterstitial];
+}
+
+- (void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        //开屏广告初始化---------
+        _splash = [[GDTSplashAd alloc] initWithAppkey:@"1105125629" placementId:@"9030701809870589"];
+        _splash.delegate = self;//设置代理
+        //针对不同设备尺寸设置不同的默认图片，拉取广告等待时间会展示该默认图片。
+        if ([[UIScreen mainScreen] bounds].size.height >= 568.0f) {
+            _splash.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"Default-568h"]];
+        } else {
+            _splash.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"Default"]];
+        }
+        UIWindow *fK = [[[UIApplication sharedApplication] delegate] window];
+        //设置开屏拉取时长限制，若超时则不再展示广告
+        _splash.fetchDelay = 10;
+        //拉取并展示
+        [_splash loadAdAndShowInWindow:fK];
+        
+        //广点通插屏
+        self.gdtInterstitial = [[GDTMobInterstitial alloc] initWithAppkey:@"1105125629" placementId:@"5080308839373670"];
+        self.gdtInterstitial.delegate = self;
+        self.gdtInterstitial.isGpsOn = NO;
+        [self.gdtInterstitial loadAd];
+    });
 }
 
 - (void)showInterstitial{
