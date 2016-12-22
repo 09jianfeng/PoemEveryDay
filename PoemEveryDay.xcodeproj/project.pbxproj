@@ -275,7 +275,6 @@
 		2E4EFCE51DE5399200D00AB8 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				2E84BE0E1E07B71600FF235D /* Global */,
 				786233B11DE9C61400E9BECC /* view */,
 				2E4EFCE41DE5398100D00AB8 /* Controller */,
 			);
@@ -356,6 +355,7 @@
 		2EB502381DE81A4500A5FB13 /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				2E84BE0E1E07B71600FF235D /* Global */,
 				2EB502391DE81A6200A5FB13 /* Macro.h */,
 			);
 			name = Util;
