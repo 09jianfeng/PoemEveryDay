@@ -43,6 +43,7 @@
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *poemEnjoyHeighContrain;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *poemPictureHeigh;
 
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
 @property (assign, nonatomic) CGFloat hwRatio;
 @property (copy, nonatomic) NSString *audioURLString;
 @end
@@ -68,6 +69,7 @@
     
     [_btnPlay setImage:[UIImage imageNamed:@"btn_play"] forState:UIControlStateNormal];
     [_btnBack setImage:[UIImage imageNamed:@"poem_back_btn"] forState:UIControlStateNormal];
+    [_activityIndicator stopAnimating];
 }
 
 - (void)viewWillAppear:(BOOL)animated{
@@ -152,6 +154,9 @@
     [_kvoController observe:_viewModel keyPath:@"playerStatus" options:NSKeyValueObservingOptionNew block:^(PoemDetailViewController *observer, PoemDetailViewControllerVM *object, NSDictionary<NSString *,id> * _Nonnull change) {
         if (object.playerStatus == PoemAudioPlayerStatusPlaying) {
             [observer.btnPlay setImage:[UIImage imageNamed:@"btn_pause"] forState:UIControlStateNormal];
+            [_activityIndicator stopAnimating];
+            _activityIndicator.hidden = YES;
+            [_activityIndicator removeFromSuperview];
         }else{
             [observer.btnPlay setImage:[UIImage imageNamed:@"btn_play"] forState:UIControlStateNormal];
         }
@@ -177,6 +182,7 @@
 
 - (IBAction)btnPlayAudioPressed:(id)sender {
     [_viewModel playerAudioWithURL:[NSURL URLWithString:_audioURLString]];
+    [_activityIndicator startAnimating];
 }
 
 /*

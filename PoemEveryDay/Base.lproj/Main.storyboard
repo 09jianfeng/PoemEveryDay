@@ -316,6 +316,13 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="wsn-dN-8Tk">
+                                                <rect key="frame" x="239" y="314" width="20" height="20"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="20" id="VqV-qg-IQM"/>
+                                                    <constraint firstAttribute="width" constant="20" id="cQW-yY-y2e"/>
+                                                </constraints>
+                                            </activityIndicatorView>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
@@ -334,6 +341,7 @@
                                             <constraint firstItem="mfW-fE-O3M" firstAttribute="leading" secondItem="2TH-BQ-mRa" secondAttribute="leading" constant="30" id="LuI-M9-g6a"/>
                                             <constraint firstItem="8fK-Kt-D5U" firstAttribute="top" secondItem="2TH-BQ-mRa" secondAttribute="top" constant="20" id="MaT-Ls-CZ8"/>
                                             <constraint firstItem="gBM-aT-cKu" firstAttribute="leading" secondItem="2TH-BQ-mRa" secondAttribute="leading" constant="20" id="NCv-bZ-gV4"/>
+                                            <constraint firstItem="wsn-dN-8Tk" firstAttribute="top" secondItem="gHe-4j-Joh" secondAttribute="bottom" constant="3" id="OwV-MM-qNM"/>
                                             <constraint firstItem="7KW-pp-iwo" firstAttribute="top" secondItem="qLc-HA-ZkB" secondAttribute="bottom" constant="8" id="TzX-35-OSx"/>
                                             <constraint firstAttribute="trailing" secondItem="C51-Xd-oEU" secondAttribute="trailing" id="aGz-FH-lKe"/>
                                             <constraint firstItem="95G-5l-uQ8" firstAttribute="leading" secondItem="2TH-BQ-mRa" secondAttribute="leading" constant="30" id="bKM-4X-Ke0"/>
@@ -350,6 +358,7 @@
                                             <constraint firstItem="qLc-HA-ZkB" firstAttribute="top" secondItem="mfW-fE-O3M" secondAttribute="bottom" constant="8" id="oVL-NJ-rlA"/>
                                             <constraint firstItem="59p-JY-MFR" firstAttribute="top" secondItem="g8h-Pb-b4U" secondAttribute="bottom" constant="8" id="pam-1T-Fd7"/>
                                             <constraint firstAttribute="trailing" secondItem="95G-5l-uQ8" secondAttribute="trailing" constant="30" id="qld-Fk-MNh"/>
+                                            <constraint firstAttribute="trailing" secondItem="wsn-dN-8Tk" secondAttribute="trailing" constant="116" id="rFH-rB-04m"/>
                                             <constraint firstItem="C51-Xd-oEU" firstAttribute="top" secondItem="7KW-pp-iwo" secondAttribute="bottom" constant="10" id="t00-cr-aDI"/>
                                             <constraint firstItem="p2p-fR-nXQ" firstAttribute="leading" secondItem="s8b-Gl-Q4S" secondAttribute="trailing" constant="8" id="wbf-1W-V2I"/>
                                             <constraint firstItem="g8h-Pb-b4U" firstAttribute="top" secondItem="7KW-pp-iwo" secondAttribute="bottom" constant="60" id="wqZ-T4-yI2"/>
@@ -388,6 +397,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="wsn-dN-8Tk" id="P0b-Ue-KYx"/>
                         <outlet property="btnBack" destination="8fK-Kt-D5U" id="a03-5Y-eWh"/>
                         <outlet property="btnPlay" destination="gBM-aT-cKu" id="lSz-kr-I7t"/>
                         <outlet property="containView" destination="2TH-BQ-mRa" id="Pyi-l7-9uF"/>
